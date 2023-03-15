@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link href="..\styles\main.css" rel="stylesheet">
+    <script>
+        //weather widget
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+    </script>
+    
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type='text/javascript'>
+        // based on https://groups.google.com/g/google-visualization-api/c/lIVZFUz8uB4?pli=1
+        google.charts.load('current', {'packages':['geochart'], });
+        google.charts.setOnLoadCallback(drawRegionsMap);
+        
+        function drawRegionsMap() {
+            var data = google.visualization.arrayToDataTable([
+                  ['Country'],
+                  ['Canada'],
+                  
+                ]);
+        
+        
+        var options = {
+            defaultColor: '#6c757d',
+        //region: 'world', resolution: 'continents',
+        };
+        
+        var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+                        
+        chart.draw(data, options);
+        
+        
+        };
+        </script>
+
+    <title>Canada</title>
+</head>
+<body>
+<div class="top-header">
+    <h2>TRAVEL PROJECT</h2>
+  </div>
+  
+  <nav id="navbar">
+    <div class="container">
+    <ul>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">PLACES</a></li>
+        <li><a href="#">BLOGS</a></li>
+        <li><a href="#">CONTACT</a></li>
+    </ul>
+    </div>
+    </nav>
+
+    <h1>Canada</h1>
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          EXPLORE
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="..\index.html">Home</a></li>
+          <li><a class="dropdown-item" href="australia.html">Australia</a></li>
+          <li><a class="dropdown-item" href="brazil.html">Brazil</a></li>
+          <li><a class="dropdown-item" href="canada.html">Canada</a></li>
+          <li><a class="dropdown-item" href="france.html">France</a></li>
+          <li><a class="dropdown-item" href="germany.html">Germany</a></li>
+          <li><a class="dropdown-item" href="india.html">India</a></li>
+          <li><a class="dropdown-item" href="japan.html">Japan</a></li>
+          <li><a class="dropdown-item" href="tanzania.html">Tanzania</a></li>
+          <li><a class="dropdown-item" href="turkey.html">Turkey</a></li>
+          <li><a class="dropdown-item" href="uk.html">United Kingdom</a></li>
+          <li><a class="dropdown-item" href="usa.html">United States</a></li>
+          
+        </ul>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col-md-4 col-lg-2" style="height: 551px; margin-top: 10px; display:inline-table">
+                <div id="chart_div" style="width: 222px;"></div>
+                <div class="travel-advice">
+                    <a button type="button" class="btn btn-secondary" href="https://www.gov.uk/foreign-travel-advice/canada/entry-requirements"  target="_blank">Travel advice</a>
+                </div>
+                
+                <a class="weatherwidget-io" href="https://forecast7.com/en/38d36n97d11/canada/" data-label_1="CANADA" data-label_2="WEATHER" data-days="3" data-theme="pure" >CANADA WEATHER</a>
+                              
+            </aside>
+            <main class="col-md-8 col-lg-7" style="margin-bottom: 0px; margin-top: 10px;">
+                <div class="text">
+                    <p>Canada, the second largest country in the world in area (after Russia), occupying roughly the northern two-fifths of the continent of North America.<br><br>
+                        Canada is officially bilingual in English and French, reflecting the country’s history as ground once contested by two of Europe’s great powers. The word Canada is derived from the Huron-Iroquois kanata, meaning a village or settlement.
+
+                        </p>
+                            <div class="source">
+                                Source: <a href="https://www.britannica.com/place/Canada" target="_blank"> Britannica.com</a>
+                    </div>
+                </div>
+                <br>
+                <div class="images">
+                    <h3>Photo Gallery</h3>
+                    <div class="responsive">
+                        <div class="gallery">
+                            <a href="../images/Canada1.jpeg" target="_blank">
+                                <img src="../images/Canada1.jpeg" width="200" alt="Tofino-The rugged coastline of Vancouver Island">
+                            </a>
+                            <div class="desc">Tofino-The rugged coastline of Vancouver Island</div>
+                        </div>
+                    </div>
+                
+                    <div class="responsive">
+                        <div class="gallery">
+                            <a href="../images/Canada2.jpeg" target="_blank">
+                                <img src="../images/Canada2.jpeg" width="200"  alt="Niagara Falls">
+                            </a>
+                            <div class="desc">Niagara Falls</div>
+                        </div>
+                    </div>
+                
+                    <div class="responsive">
+                        <div class="gallery">
+                            <a href="../images/Canada3.jpeg" target="_blank">
+                                <img src="../images/Canada3.jpeg" width="200" alt="Whistler">
+                            </a>
+                            <div class="desc">Whistler</div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+</body>
+</html>

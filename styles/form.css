@@ -1,0 +1,41 @@
+#index-main{
+    padding: 25px;
+}
+
+#form-id {
+    display:block;
+}
+
+.contact-form {
+    width: 350px;
+    margin: auto;    
+    font-weight: 400;
+    line-height: 1.5;
+    color: #064A74;
+    padding-bottom: 10px;
+}
+
+@media only screen and (max-width: 350px) {
+    .contact-form{
+        width: 200px;
+    }
+}
+
+.form-item{
+    margin-bottom: 1rem;
+}
+
+.form-item input{
+
+    display: flex;
+    width: 100%;
+        
+}
+
+.form-message {
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+
+/*inspired by https://www.majesticform.com/form-guides/html-email-form*/

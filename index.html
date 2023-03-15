@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!---Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!--Import materialize.css-->
+    <!--Local css-->
+    <link href="./styles/main.css" rel="stylesheet">
+
+    <!---Map-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type='text/javascript'>
+    // based on the documentation from Google Geocharts,
+    google.charts.load('current', {'packages':['geochart'], });
+    google.charts.setOnLoadCallback(drawRegionsMap);
+
+    function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+              ['Country'],
+              ['Canada'],
+              ['Brazil'],
+              ['United States'],
+              //['United Kingdom'],
+              ['France'],
+              ['Germany'],
+              ['Tanzania'],
+              ['India'],
+              ['Japan'],
+              ['Turkey'],
+              ['Australia']
+            ]);
+
+
+    var options = {
+        defaultColor: '#064A74',
+        //backgroundColor: 'antiquewhite',
+        datalessRegionColor: '#DCDCDC'
+    //region: 'world', resolution: 'continents',
+    };
+
+    var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+    
+    // the following eventListener based on https://groups.google.com/g/google-visualization-api/c/lIVZFUz8uB4?pli=1
+    
+    google.visualization.events.addListener(chart, 'regionClick', function(eventData) {
+        // alert('You clicked on a region named: ' + eventData.region);
+        
+        // this was my addition
+        var countries = {
+          'CA' : './pages/canada.html',
+          'BR' : './pages/brazil.html',
+          'US' : './pages/usa.html',
+          //'GB' : './pages/uk.html', 
+          'FR' : './pages/france.html',
+          'DE' : './pages/germany.html',
+          'TZ' : './pages/tanzania.html',
+          'IN' : './pages/india.html',
+          'JP' : './pages/japan.html',
+          'TR' : './pages/turkey.html',
+          'AU' : './pages/australia.html',
+
+        }
+
+        if (eventData.region in countries){
+            window.open(countries[eventData.region], "_self");
+        }
+    });
+
+    chart.draw(data, options);
+
+    };
+    </script>
+
+    <title>Home page</title>
+</head>
+<body>
+  
+  <header id="main-header">
+    <div class="top-header">
+      <h2>TRAVEL PROJECT</h2>
+    </div>
+  </header>
+
+  <!--Navbar-->
+  <nav>
+    <ul class="main-nav">
+        
+        <!--Links-->
+        <li class="push-right">
+            <div id="navbar-right">
+                <ul>
+                    <li><a href="./index.html">HOME</a></li>
+                    <li><a href="./pages/places.html">PLACES</a></li>
+                    <li><a href="./pages/blogs.html">BLOGS</a></li>
+                    <li><a href="./pages/contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </li>
+        <!---Dropdown-->
+        <li>
+          <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              EXPLORE
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">                  
+                  <li><a class="dropdown-item" href="./pages/australia.html">Australia</a></li>
+                  <li><a class="dropdown-item" href="./pages/brazil.html">Brazil</a></li>
+                  <li><a class="dropdown-item" href="./pages/canada.html">Canada</a></li>
+                  <li><a class="dropdown-item" href="./pages/france.html">France</a></li>
+                  <li><a class="dropdown-item" href="./pages/germany.html">Germany</a></li>
+                  <li><a class="dropdown-item" href="./pages/india.html">India</a></li>
+                  <li><a class="dropdown-item" href="./pages/japan.html">Japan</a></li>
+                  <li><a class="dropdown-item" href="./pages/tanzania.html">Tanzania</a></li>
+                  <li><a class="dropdown-item" href="./pages/turkey.html">Turkey</a></li>
+                  <!--<li><a class="dropdown-item" href="./pages/uk.html">United Kingdom</a></li>-->
+                  <li><a class="dropdown-item" href="./pages/usa.html">United States</a></li>
+              
+              </ul>
+          </div>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container-fluid" style="margin: 0px; padding: 0px;">
+    <section id="showcase">
+      <div class="container">
+          <mark>Live your dream - Travel anywhere and everywhere.</mark>
+      </div>
+    </section>
+
+    <div class="row" style="margin-right: 0px;">
+
+      <!--empty div, only to display as peach column on medium/large devices-->
+      <div class="side col-md-2 col-lg-2">
+      </div>
+      
+      <!--middle section of the page-->
+      <main id="index-main" class="col-md-8 col-sm-12">
+        <!-- <img src="./images/travelpic1.jpeg" target_blank alt="a girl with a hat viewing tombs" class="travelpic1"> -->
+        <h2>World Travel Interactive Map</h2>
+
+        <h4> Discover each country using this interactive map, click the blue to learn more</h4>
+        <!--original: <p>click the blue to learn more</p>-->
+        
+        <div id="chart_div" style="height: 500px;"></div>
+
+        <div class="text_inner">
+          <h2>Broken Down Travel Map</h2>
+          <p>Welcome to the destinations page! <br> Here you can check out some great locations across the world.
+            <br>Click below to see the travel guides and blog posts from each of these countries!</p>
+        </div>
+
+        <div class ="container-md text-left">
+
+          <!--First row of continents, display 3 on large screens, 1 on mobile devices-->
+          <div class="row continents gx-3  row-cols-1 row-cols-md-3">
+            <span class="border-0 col">
+              <img class="image-row" src="./images/NorthAmerica.jpg" alt="North America">
+            
+              <a href="./pages/canada.html">Canada</a><br>             
+              <a href="./pages/usa.html">United States</a><br>
+              
+            </span>
+
+            <span class="border-0 col">
+              <img class="image-row" src="./images/SouthAmerica.jpg" alt="South America">
+            
+              <a href="./pages/brazil.html">Brazil</a>
+              
+            </span> 
+            
+            <span class="border-0 col">
+              <img class="image-row" src="./images/Europe..jpg" alt="Europe">
+          
+              <!--<a href="./pages/uk.html">United Kingdom</a><br>-->
+              <a href="./pages/france.html">France</a><br>
+              <a href="./pages/germany.html">Germany</a>                             
+              
+            </span>
+          </div>
+          
+          <!--Second row of continents, display 3 on large screens, 1 on mobile devices-->
+          <div class="row continents gx-3 row-cols-1 row-cols-md-3">
+
+            <span class="border-0 col">
+              <img class="image-row" src="./images/Africa..jpg" alt="Africa">
+          
+              <a href="./pages/tanzania.html">Tanzania</a>
+              
+            </span>
+
+            <span class="border-0 col">
+              <img class="image-row" src="./images/Asia..jpg" alt="Asia">
+            
+              <a href="./pages/india.html">India</a><br>
+              <a href="./pages/japan.html">Japan</a><br>
+              <a href="./pages/turkey.html">Turkey</a>
+              
+            </span>
+
+            <span class="border-0 col">
+              <img class="image-row" src="./images/Oceania..JPG" alt="Oceania">
+            
+              <a href="./pages/australia.html">Australia</a>
+              
+            </span>
+
+          </div>
+        </div>
+    
+      </main>
+
+      <!--empty div, only to display as peach column on medium/large devices-->
+      <div class="side col-md-2 col-lg-2">
+
+      </div>
+
+    </div>   
+  </div>
+
+  <footer>
+    Copyright &#169; 2023 <br>
+    Team 4
+  </footer>
+
+  <!--Bootstrap js-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,382 @@
+/* sidebar*/
+
+    /*map*/
+    .heading h5{
+        color: #064A74;
+        font-family:"Tahoma";        
+        text-align: left;
+        font-weight: 600;
+        padding-left: 10px;
+        
+    }
+
+    #chart_div{
+        margin: auto;
+
+    }
+
+    /* weather widget */
+    .weatherwidget-io{
+        padding: 20px;
+        width: 222px;
+    }
+
+    .weather{
+        padding-left: 10px;
+    }
+
+    /* travel advice & accommodation button*/
+    .advice, .advice p {
+        padding-left: 10px;
+        text-align: left;
+        
+    }
+
+    /*quick facts*/
+    .facts{
+        color: #064A74;
+        text-align: left;
+        padding-left: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        line-height: 1.5em;
+        font-weight: 300;
+    }
+
+    .facts h5{
+        color: #064A74;
+        font-family:"Tahoma";
+        text-align: left;
+        font-weight: 600;
+    }
+    
+    .facts ul{
+        padding-top: 10px;
+    }
+
+    .facts li{
+        margin-top: 10px;
+    }
+
+    .currency{
+        margin-top: 10px;
+        
+    }
+
+    .clock{
+        margin-left: -30px;
+        width: 222px;
+        
+    }
+
+/*End of Sidebar*/
+
+/*not sure about this one*/
+*{
+    box-sizing: border-box;
+  }
+
+/* Image gallery*/
+
+    .carousel {
+        margin: auto;
+    }
+    
+/* End of Image gallery*/
+
+/* General */
+    /*Headers - all pages*/
+    h1 {
+        color: #F8B93A;
+        padding: 10px;
+    }
+
+    h2{
+        color: #F8B93A;
+        font-family:'Tahoma';
+        font-size: 45px;
+        font-weight:500;
+        line-height: 1.3em;
+        text-align: center;
+    }
+
+    h3 {    
+        color: #F8B93A;
+        font-family:"Tahoma";
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    h4 {
+        color: #064A74;
+        font-weight: 300;
+        line-height: 3em;
+        text-align: center;
+    }
+
+    h6 {    
+        color: #F8B93A;
+    }
+
+    main {
+        background-color: #fff;
+        
+    }
+    
+    /*all pages*/
+    footer {
+        background-color:#294C60;
+        color: #F8B93A;
+        bottom: 0;
+        left: 0;
+        position:relative;
+        text-align: center;
+        width: 100%;
+    }
+
+    aside{
+        margin-bottom: 10px;
+    }
+
+    /*both files*/
+    body {
+        font-family: "bookman old style";
+        margin: 0;
+        color: #040808;
+        background-color: #faebd7;/*hex for antiquewhite*/
+    }
+
+    p{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 10px;
+        line-height: 1.5em;
+        font-weight: 300;
+        font-size: 18px;
+        color: #064A74;
+        text-align: center;
+    }
+    
+      
+
+    /*img that's on it's own (not as a part of div or with different class name) not in any file*/
+    img {
+        display:block;
+        border-color: none;
+        
+    } 
+
+    /*header*/
+
+    
+    /*in both - index&Brazil*/
+    .top-header {
+            background-color:#294C60;
+            font-family:"Tahoma";
+            text-transform:uppercase;
+            display:flex;
+            padding-left: 1cm;
+
+    }
+    /*End of header*/
+                
+/*Countries broken down by Continents (index)*/
+    .image-row{
+        display: block;
+        width:100%;
+        height: auto;
+        align-self: center;
+        margin: auto;
+    }
+    .col h3{
+        color: #F8B93A;
+        text-align: center;
+    }
+
+    /* not needed, ul/li removed from span, replaces with <a> only
+    .col li{
+        list-style: none;
+        text-align: center;
+        margin-left: -25px;
+    }
+    */
+
+    .col a{
+        color: #1f7a8c;
+        text-decoration: underline;
+        font-size: large;
+        font-weight: 500;
+        text-transform: uppercase;
+        
+    }
+
+    .col a:hover{
+        font-size: x-large;
+        
+    }
+
+    .border-0{
+        margin: 3px;
+        padding: 0px;
+        width: 32%;
+        background-color: #f4f4ed;
+        text-align: center;
+    }
+
+    .continents{
+        margin: auto;
+        padding-bottom: 10px;
+        justify-content: center;          
+    }
+
+    
+    @media only screen and (max-width: 500px) {
+        .border-0 {
+            width: 100%;        
+        }
+    }
+
+
+
+   
+/*End of Countries broken down by continent*/
+
+/*Individual Countries - country info and to-do list */
+.to-do-text, .main-text, .main-text p {
+    text-align: justify;
+    padding: 10px;
+    
+}
+.to-do ul{
+    list-style-type: none;
+}
+.to-do-text, .to-do p{
+    
+    /*list-style-type: none;*/
+    line-height: 1.5em;
+    font-weight: 300;
+    font-size: 18px;
+    color: #064A74;
+    text-align:justify;
+       
+}
+
+.to-do-text h5{
+    font-weight: 600;
+}
+
+.main-text img, .to-do img{
+    padding: 10px;
+    height: 100%;
+}
+
+
+/*End of Individual Countries - country info and to-do list*/
+
+/* Navbar with dropdown menu*/
+nav{
+    background-color:#294C60;
+    color:#FFFFFB;
+    padding:10px;
+}
+
+.main-nav{
+    display:flex;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    
+}
+
+.push-right{
+    margin-left: auto;
+    margin-top: 5px;
+    
+}
+
+#navbar-right li{
+    display:inline;
+}
+
+
+#navbar-right a, .dropdown{
+    font-family:Tahoma;
+    color:#F8B93A;
+    text-decoration:none;
+    font-size: 18px;
+    padding-right:20px;
+}
+/*end of Navbar with dropdown menu*/
+
+/*showcase = picture on top of the homepage*/
+/*index - also the  content of id showcase is class container that has separate style
+container also part of navbar*/
+#showcase{
+    background-image: url("https://www.rafischer.com/wp-content/uploads/2019/10/traveling-iontophoresis-machine-ra-fischer-header.png");
+    background-position:center;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align:center;
+    background-repeat: no-repeat;
+    /*opacity: 0.6;*/
+    margin: 0px;
+    
+}
+/*index*/
+#showcase h1{
+    color:#040808;
+    font-size:50px;
+    line-height:5em;
+    padding-top:30px;
+   
+}
+
+/*index - 1xdiv class under section id showcase*/
+.container{
+    width:80%;
+    margin:auto;
+    overflow:hidden;
+}
+
+mark {
+    color:black;
+    font-family:"Tahoma";
+    font-size: 40px;
+    line-height: 7em;
+    text-align: center;
+    background-color: #fff;
+    opacity: 80%;
+    
+}
+
+
+@media only screen and (max-width: 1250px){
+    mark{
+        line-height: 3em;
+    }
+}
+
+@media only screen and (max-width: 650px){
+    mark {
+        font-size: 35px;
+        line-height: 2em;
+    }
+}
+
+
+/*End of showcase*/
+
+
+/* travelpic1 class not in any file
+    .travelpic1{
+        margin: 50px auto 50px; 
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        
+    }    */
+    .column {
+        float: left;
+        width: 40%;
+      }
