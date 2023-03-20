@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <link href="..\styles\main.css" rel="stylesheet">
-    <script>
-        //weather widget
-        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-    </script>
     
+    <!--Bootstrap css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    
+    <!--Local css-->
+    <link href="../styles/main.css" rel="stylesheet">
+        
+    <!--map--> 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type='text/javascript'>
         // based on https://groups.google.com/g/google-visualization-api/c/lIVZFUz8uB4?pli=1
@@ -65,32 +65,32 @@
                 </div>
             </li>
 
-     <!---Dropdown-->
-            <li>
-                <div class="dropdown">
-                    <button class="btn drop btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    EXPLORE
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="../index.html">Home</a></li>
-                        <li><a class="dropdown-item" href="australia.html">Australia</a></li>
-                        <li><a class="dropdown-item" href="brazil.html">Brazil</a></li>
-                        <li><a class="dropdown-item" href="canada.html">Canada</a></li>
-                        <li><a class="dropdown-item" href="france.html">France</a></li>
-                        <li><a class="dropdown-item" href="germany.html">Germany</a></li>
-                        <li><a class="dropdown-item" href="india.html">India</a></li>
-                        <li><a class="dropdown-item" href="japan.html">Japan</a></li>
-                        <li><a class="dropdown-item" href="tanzania.html">Tanzania</a></li>
-                        <li><a class="dropdown-item" href="turkey.html">Turkey</a></li>
-                        <!--<li><a class="dropdown-item" href="uk.html">United Kingdom</a></li>-->
-                        <li><a class="dropdown-item" href="usa.html">United States</a></li>
-                    
-                    </ul>
-                </div>
-            </li>
+<!---Dropdown-->
+<li>
+    <div class="dropdown">
+        <button class="btn drop btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        EXPLORE
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="../index.html">Home</a></li>
+            <li><a class="dropdown-item" href="australia.html">Australia</a></li>
+            <li><a class="dropdown-item" href="brazil.html">Brazil</a></li>
+            <li><a class="dropdown-item" href="canada.html">Canada</a></li>
+            <li><a class="dropdown-item" href="france.html">France</a></li>
+            <li><a class="dropdown-item" href="germany.html">Germany</a></li>
+            <li><a class="dropdown-item" href="india.html">India</a></li>
+            <li><a class="dropdown-item" href="japan.html">Japan</a></li>
+            <li><a class="dropdown-item" href="tanzania.html">Tanzania</a></li>
+            <li><a class="dropdown-item" href="turkey.html">Turkey</a></li>
+            <!--<li><a class="dropdown-item" href="uk.html">United Kingdom</a></li>-->
+            <li><a class="dropdown-item" href="usa.html">United States</a></li>
+        
         </ul>
+    </div>
+</li>
+</ul>
 
-    </nav>
+</nav>
 
 
     <div class="container-fluid">
@@ -272,7 +272,7 @@
 <!--Photo gallery-->
                 
 <h3>Photo Gallery</h3>
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" style="width: 500px; object-fit: cover;">
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" style="max-width: 500px">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -285,38 +285,38 @@
         <div class="carousel-item active">
             <img src="https://pacificnorthwestexplorer.com/wp-content/uploads/2019/01/P8110017-1200x898.jpg" class="d-block w-100" alt="Tofino-The rugged coastline of Vancouver Island">
             <div id="1-info" class="carousel-caption d-none d-md-block">
-                <h5>Tofino on Vancouver Island</h5>
+                <h5 style="background-color:#294C60;">Tofino on Vancouver Island</h5>
             </div>
         </div>
               <div class="carousel-item">
                 <img src="https://a.cdn-hotels.com/gdcs/production61/d705/7ca91ea1-03ea-4404-9fcd-323af03406f6.jpg" class="d-block w-100" alt="Whistler">
                 <div id="2-info" class="carousel-caption d-none d-md-block">
-                    <h5>Whistler</h5>
+                    <h5 style="background-color:#294C60;">Whistler</h5>
                   </div>
               </div>
               <div class="carousel-item">
                 <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/06/67/ac/16.jpg" class="d-block w-100" alt="
                 Capilano Suspension Bridge Park">
                 <div id="3-info" class="carousel-caption d-none d-md-block">
-                    <h5> Capilano Suspension Bridge Park</h5>  
+                    <h5 style="background-color:#294C60;">Capilano Suspension Bridge Park</h5>  
                   </div>
               </div>
               <div class="carousel-item">
                 <img src="https://cdn11.bigcommerce.com/s-yzgoj/images/stencil/1280x1280/products/2840879/5892068/DPI21585013__16148.1666154268.jpg?c=2" class="d-block w-100" alt="Notre-Dame Basilica of Montreal">
                 <div id="4-info" class="carousel-caption d-none d-md-block">
-                    <h5>Notre-Dame Basilica of Montreal</h5>  
+                    <h5 style="background-color:#294C60;">Notre-Dame Basilica of Montreal</h5>  
                   </div>
               </div>
               <div class="carousel-item">
                 <img src="https://images.squarespace-cdn.com/content/v1/53e38b28e4b00000fd135fa0/1552494920080-1W6DANKDIE0EI7AR0XY8/ambiance+starwbrry+chair+mountains+.jpg?format=2500w" class="d-block w-100" alt="Sunshine Village">
                 <div id="5-info" class="carousel-caption d-none d-md-block">
-                    <h5>Sunshine Village</h5>  
+                    <h5 style="background-color:#294C60;">Sunshine Village</h5>  
                   </div>
               </div>
               <div class="carousel-item">
                 <img src="https://img.huffingtonpost.com/asset/5cd66f8c21000035007560b2.jpeg?ops=scalefit_720_noupscale" class="d-block w-100" alt="Hopewell Rocks Provincial Park">
                 <div id="6-info" class="carousel-caption d-none d-md-block">
-                    <h5>Hopewell Rocks Provincial Park</h5>  
+                    <h5 style="background-color:#294C60;">Hopewell Rocks Provincial Park</h5>  
                   </div>
               </div>
             </div>
