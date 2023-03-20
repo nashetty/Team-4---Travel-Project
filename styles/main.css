@@ -87,12 +87,14 @@
 /* General */
     /*Headers - all pages*/
     h1 {
-        color: #F8B93A;
+        color:#064874;
         padding: 10px;
+        font-weight:600;
+
     }
 
     h2{
-        color: #F8B93A;
+        color: #064874;
         font-family:'Tahoma';
         font-size: 45px;
         font-weight:500;
@@ -101,9 +103,9 @@
     }
 
     h3 {    
-        color: #F8B93A;
+        color: #064874;
         font-family:"Tahoma";
-        font-size: 20px;
+        font-size: 25px;
         font-weight: 600;
         text-align: center;
     }
@@ -116,7 +118,7 @@
     }
 
     h6 {    
-        color: #F8B93A;
+        color: #064874;
     }
 
     main {
@@ -178,6 +180,9 @@
             display:flex;
             padding-left: 1cm;
 
+    }
+    .top-header h2{
+        color: #F8B93A;
     }
     /*End of header*/
                 
@@ -264,6 +269,7 @@
 
 .to-do-text h5{
     font-weight: 600;
+    font-family:"Tahoma";
 }
 
 .main-text img, .to-do img{
