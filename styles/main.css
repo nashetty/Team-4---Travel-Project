@@ -386,3 +386,7 @@ mark {
         float: left;
         width: 40%;
       }
+
+.carousel-item h5 {
+background-color: #294C60;
+}

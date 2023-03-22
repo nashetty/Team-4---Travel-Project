@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Bootstrap css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    
+    <!--Local css-->
+    <link href="../styles/main.css" rel="stylesheet">
+        
+    <!--map--> 
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type='text/javascript'>
+        // based on https://groups.google.com/g/google-visualization-api/c/lIVZFUz8uB4?pli=1
+        google.charts.load('current', {'packages':['geochart'], });
+        google.charts.setOnLoadCallback(drawRegionsMap);
+        
+        function drawRegionsMap() {
+            var data = google.visualization.arrayToDataTable([
+                  ['Country'],
+                  ['India'],
+                  
+                ]);
+        
+        
+        var options = {
+            defaultColor: '#064A74', // grey:'#6c757d',
+            backgroundColor: 'antiquewhite',
+            datalessRegionColor: '#DCDCDC',
+
+        //region: 'world', resolution: 'continents',
+        };
+        
+        var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+                        
+        chart.draw(data, options);
+        
+        
+        };
+        </script>
+
+    <title>India</title>
+</head>
+<body>
+
+    <!--Header-->
+    <div class="top-header">
+        <h2>TRAVEL PROJECT</h2>
+    </div>
+    
+    <!--Navbar-->
+    <nav>
+        <ul class="main-nav">
+            
+            <!--Rest-->
+            <li class="push-right">
+                <div id="navbar-right">
+                    <ul>
+                        <li><a href="../index.html">HOME</a></li>
+                        <li><a href="places.html">PLACES</a></li>
+                        <li><a href="blogs.html">BLOGS</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </div>
+            </li>
+        
+            <!---Dropdown-->
+            <li>
+                <div class="dropdown">
+                    <button class="btn drop btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    EXPLORE
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="../index.html">Home</a></li>
+                        <li><a class="dropdown-item" href="australia.html">Australia</a></li>
+                        <li><a class="dropdown-item" href="brazil.html">Brazil</a></li>
+                        <li><a class="dropdown-item" href="canada.html">Canada</a></li>
+                        <li><a class="dropdown-item" href="france.html">France</a></li>
+                        <li><a class="dropdown-item" href="germany.html">Germany</a></li>
+                        <li><a class="dropdown-item" href="india.html">India</a></li>
+                        <li><a class="dropdown-item" href="japan.html">Japan</a></li>
+                        <li><a class="dropdown-item" href="tanzania.html">Tanzania</a></li>
+                        <li><a class="dropdown-item" href="turkey.html">Turkey</a></li>
+                        <!--<li><a class="dropdown-item" href="uk.html">United Kingdom</a></li>-->
+                        <li><a class="dropdown-item" href="usa.html">United States</a></li>
+                    
+                    </ul>
+                </div>
+            </li>
+        </ul>
+
+    </nav>
+
+        
+    <div class="container-fluid">
+        <div class="row countries">
+            <!--Side bar-->
+            <aside class="col-md-5 col-lg-2" style="height: 551px; margin-top: 10px; display:inline-table">
+                
+                <!--Map-->
+                <div class="heading"><h5>India</h5></div>
+                <div id="chart_div" style="width: 222px;"></div>
+
+                <!--Quick facts-->
+                <hr>
+                <div class="facts">
+                    <h5>Quick facts</h5>
+                    <ul>
+                        <li><h5>Population:</h5>1,370.7 million<br></li>
+                        <li><h5>Languages spoken:</h5> Hindi and English. However, according to Census of India 2011,
+                            there are total 121 languages that are considered as mother tongues.<br></li>
+                        <li><h5>Capital city:</h5> New Delhi</li>
+                        <li><h5>Safety rating:</h5> According to the Global Peace Index 2022, India is number 135 
+                            out of 163 countries<br> </li>
+                        <li><h5>Current time:</h5> India has only one time zone - UTC +5:30, despite the fact that  the Sun rises 
+                            almost 90 minutes earlier in Dong in the far east than in Guar Mota in the west.
+                            <!--source https://www.timeanddate.com/time/zone/india-->
+
+                            <!--Time widget 
+                                from https://logwork.com/clock-widget-text-->
+                            <div class="clock">
+                                <script src="https://cdn.logwork.com/widget/text.js"></script>
+                                <a href="https://logwork.com/current-time-in-new-delhi-india-delhi" class="clock-widget-text" data-timezone="Asia/Kolkata" data-language="en" data-textcolor="#064a74" data-digitscolor="#064a74">New Delhi, India, Delhi</a>
+                            </div>
+                           
+                            
+                        </li>
+                        <!--Currency-->
+                        <li><h5>Local currency:</h5> Indian Rupee (INR)<br>
+                            <div class="currency">
+                                <!-- Currency Converter Script - FxExchangeRate.com - https://www.fxexchangerate.com/exchange-rates-widget.html -->
+                                <div style="font-size:16px; font-family: sans-serif,Arial, Helvetica;width:198px; line-height:24px;border:1px solid #4A4A4A;background-color:#D6D6D6;margin:0px;">
+                                    <div style="background-color:#4A4A4A;height:2.2rem;color:#FFFFFF; font-weight:bold;text-align:left;padding:6px 0 0 6px; max-width:100%;">
+                                        <i style="background-size: contain;background-position: 50%;background-repeat: no-repeat; position: relative;display: inline-block;width: 1.33333333em;line-height: 1em; padding:0 8px 0 0px;font-size:18px;background-image:url(https://w.fxexchangerate.com/static/flags/gbp.webp);">&nbsp;</i>
+                                        <a rel="nofollow" style="color:#FFFFFF;padding-left:5px;text-decoration:none;" href="https://gbp.fxexchangerate.com">British Pound</a>
+                                    </div>
+                                    <script type="text/javascript" src="https://w.fxexchangerate.com/converter.php?fm=GBP&ft=INR,&lg=en&am=1&ty=2"></script>
+                                </div>
+                                <!--  End of Currency Converter Script -  FxExchangeRate.com -->
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!--Weather widget-->
+                <div class="weather">
+                    <hr>
+                    <div class="heading"><h5>Current Weather</h5></div>
+                    <a class="weatherwidget-io" href="https://forecast7.com/en/28d6177d21/new-delhi/" data-label_1="NEW DELHI" data-label_2="WEATHER" data-days="3" >NEW DELHI WEATHER</a>
+                    <script>
+                        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+                    </script>
+                </div>    
+
+                <!--Travel advice link-->
+                <hr>
+                <div class="advice">
+                    <div class="heading"><h5>Travel Advice</h5></div>
+                    <p>For more information and travel advice, please visit Foreign travel advice at gov.uk here:</p>
+                    <a class="btn btn-secondary" href="https://www.gov.uk/foreign-travel-advice/india/entry-requirements"  target="_blank" role="button">Travel advice</a>
+                </div>
+
+                <!--Accommodation link-->
+                <hr>
+                <div class="advice">
+                    <div class="heading"><h5>Accommodation</h5></div>
+                    <p>To view and book accommodation, please visit booking.com here: </p>
+                    <a class="btn btn-secondary" href="https://www.booking.com/index.en-gb.html"  target="_blank" role="button">Accommodation</a>
+                </div>
+                               
+                         
+            </aside>
+
+            <!--Main text-->
+
+            <main class="col-md-7 col-lg-8" style="margin-bottom: 0px; margin-top: 0px; padding-top: 10px;">
+                <h1>India</h1>
+                <div class="main-text">
+                    <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
+                        <p class="col">
+                            India, officially the Republic of India is a country in South Asia. It is the seventh-largest country 
+                            by area and the second-most populous country. Bounded by the Indian Ocean on the south, the Arabian Sea 
+                            on the southwest, and the Bay of Bengal on the southeast, it shares land borders with Pakistan to the 
+                            west; China, Nepal, and Bhutan to the north; and Bangladesh and Myanmar to the east.
+                        </p>
+                        <img class="col" src="../images/indian_flag.jpg" alt="Indian Flag">
+                    </div>
+                    <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
+                        <img class="col" src="../images/rajasthani-women.jpg" alt="Rajasthani Women">
+                        <p class="col">
+                            India is a vibrant and diverse country with a rich cultural heritage. It is the second-most populous country in 
+                            the world, with a population of over 1.3 billion people. India has a diverse landscape, from the Himalayan 
+                            mountains in the north to the Indian Ocean in the south. The country is also home to a large number of 
+                            wildlife species, including tigers, elephants, and monkeys, among others. 
+                        </p>
+
+                    </div>
+
+                    <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
+                        <p class="col">
+                            It is renowned for its rich history and cultural heritage. The country has a long and fascinating history 
+                            that spans over 5,000 years, and it is home to some of the world's most iconic monuments, such as the 
+                            Taj Mahal, Red Fort, and Qutub Minar. India is also known for its diverse culinary culture, which includes 
+                            a wide range of vegetarian and non-vegetarian dishes. The country's cuisine is an amalgamation of different 
+                            regional flavors and spices, and it is enjoyed by people all over the world.
+                        </p>
+                        <img class="col" src="../images/women_sari.jpg" alt="Step Well">
+                    </div>
+
+                    
+                    <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
+                        <img class="col" src="../images/new_delhi.jpg" alt="Humayun's Tomb, New Delhi">
+                        <p class="col">
+                            India is a land of festivals and celebrations. The country is home to a diverse range of religious and cultural 
+                            festivals, which are celebrated with great enthusiasm and pomp. Some of the most popular festivals in India include 
+                            Diwali, Holi, Durga Puja, Eid, and Christmas. During these festivals, people come together to celebrate with 
+                            music, food, and dance, making it a truly unforgettable experience. 
+                        </p>
+
+                    </div>    
+                                                   
+
+                
+                    <div class="source">
+                        Source: <a href="https://en.wikipedia.org/wiki/India" target="_blank"> Wikipedia.com</a>
+                    </div>
+                </div>
+                <br>
+
+                <!--Things To Do-->
+                <h3>Things to do</h3>
+                <div class="text">
+                    <div class="to-do">
+                        <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
+                            <div class="col to-do-text">
+                                <h5>Visit the Taj Mahal in Agra</h5>
+                                <p>One of the seven wonders of the world, the Taj Mahal 
+                                    is a marble mausoleum that is a must-visit attraction in India.                                
+                                </p>
+                            </div>
+                            <img class="col" src="../images/taj_mahal.jpg" alt="Taj Mahal">
+                            
+                        </div>
+                        <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
+                            <div class="col to-do-text">
+                                <h5>Explore Rajasthan's Royal Palaces</h5>
+                                <p>Rajasthan is home to some of the most stunning royal palaces in the country, 
+                                    including the Amber Palace, Umaid Bhawan Palace, and City Palace.
+                                </p>
+                            </div>
+                            <img class="col" src="../images/umaid_bhavan_palace.jpg" alt="Umaid Bhawan Palace">
+                        </div>
+                        <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
+                            <div class="col to-do-text">
+                                <h5>Attend the Kumbh Mela</h5> 
+                                <p>The Kumbh Mela is one of the largest religious gatherings in the world and takes 
+                                    place in four locations across India. It is a festival that celebrates the Hindu 
+                                    faith and attracts millions of visitors.
+                                </p>
+                            </div>
+                            <img class="col" src="../images/kumbh_mela.jpg" alt="Kumbh Mela">
+                        </div>    
+                        <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
+                            <div class="col to-do-text">
+                                <h5>Take a Houseboat Tour in Kerala</h5>
+                                <p>The backwaters of Kerala are a network of lagoons, lakes, and canals that are best explored 
+                                    on a houseboat. You can experience the beauty of the region while enjoying traditional Malayali cuisine.
+                                    
+                                </p>
+                            </div>
+                            <img class="col" src="../images/houseboat_tour_kerala.jpg" alt="Houseboat Tour in Kerala">
+                        </div>
+
+                        <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
+                            <div class="col to-do-text">
+                                <h5>Go on a Tiger Safari</h5> 
+                                <p>India is one of the few places in the world where you can see tigers in their natural habitat. There are 
+                                    several national parks that offer tiger safaris, including Bandhavgarh, Ranthambore, and Kanha.
+                                </p>
+                            </div>
+                            <img class="col" src="../images/tiger_safari.jpg" alt="Tiger Safari">
+                        </div>                    
+                    </div>
+                                               
+                
+                </div>
+
+                <!--Photo gallery-->
+                
+                <h3>Photo Gallery</h3>
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" style="max-width: 500px">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../images/hawa_mahal.jpg" class="d-block w-100" alt="Hawa Mahal, Jaipur">
+                            <div id="india-1-info" class="carousel-caption d-none d-md-block">
+                                <h5>Hawa Mahal, Jaipur</h5>
+                            </div>
+                        </div>
+                              <div class="carousel-item">
+                                <img src="../images/Kapaleeshwarar_Temple.jpg" class="d-block w-100" alt="Kapaleeshwarar Temple, Chennai">
+                                <div id="india-2-info" class="carousel-caption d-none d-md-block">
+                                    <h5>Kapaleeshwarar Temple, Chennai</h5>
+                                  </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="../images/darjeeling_himalayas.jpg" class="d-block w-100" alt="Darjeeling with the Himalayas in the distance">
+                                <div id="india-3-info" class="carousel-caption d-none d-md-block">
+                                    <h5>Darjeeling with the Himalayas in the distance</h5>  
+                                  </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="../images/holi.jpg" class="d-block w-100" alt="Holi: Festival of Colors">
+                                <div id="india-4-info" class="carousel-caption d-none d-md-block">
+                                    <h5>Holi: Festival of Colors</h5>  
+                                  </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="../images/cola_beach.jpg" class="d-block w-100" alt="Cola Beach, Goa">
+                                <div id="india-5-info" class="carousel-caption d-none d-md-block">
+                                    <h5>Cola Beach, Goa</h5>  
+                                  </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="../images/golden_temple.jpg" class="d-block w-100" alt="Golden Temple, Amritsar">
+                                <div id="india-6-info" class="carousel-caption d-none d-md-block">
+                                    <h5>Golden Temple, Amritsar</h5>  
+                                  </div>
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
+                          <br>
+
+                
+             
+               
+            </main>
+     
+          </div>
+        </div>
+    
+    <footer>
+        Copyright &#169; 2023 <br>
+        Team 4
+    </footer>
+
+    <!--Bootstrap js-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+</body>
+</html>
