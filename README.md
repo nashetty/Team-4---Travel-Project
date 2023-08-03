@@ -38,6 +38,11 @@ Welcome to our comprehensive travel portal, where we bring the world to your fin
 3. Discover a plethora of interesting things to do in each country, tailored to cater to every traveler's preferences.
 4. Embark on a visual journey with our stunning photo galleries, featuring breathtaking images that capture the essence of each country's landscapes, landmarks, and people. Let the pictures speak volumes and inspire you to plan your next unforgettable journey.
 
+## Screenshots
+
+![responsive-home](https://github.com/nashetty/Team-4---Travel-Project/assets/110870202/60bff9ca-8628-41da-baa5-7fd0beaf3153)
+![responsive-countries](https://github.com/nashetty/Team-4---Travel-Project/assets/110870202/25691ea4-8034-4c08-b732-a15f9f662d08)
+
 ## Contributing:
 Welcome aboard, fellow developer! Feel free to submit your own remarkable contributions, allowing others to witness and benefit from your creativity. We welcome any and all contributions! We look forward to seeing your fantastic ideas! Here are some ways you can get started:
 
