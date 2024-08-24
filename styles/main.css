@@ -132,7 +132,7 @@
         color: #F8B93A;
         bottom: 0;
         left: 0;
-        position:relative;
+        position:absolute;
         text-align: center;
         width: 100%;
     }
@@ -142,6 +142,16 @@
     }
 
     /*both files*/
+    html, body {
+        height: 100%;
+    margin: 0;
+    }
+
+    .wrapper {
+        min-height: 100vh;
+    position: relative;
+    padding-bottom: 50px;
+    }
     body {
         font-family: "bookman old style";
         margin: 0;
@@ -319,7 +329,7 @@ nav{
 /*index - also the  content of id showcase is class container that has separate style
 container also part of navbar*/
 #showcase{
-    background-image: url("https://www.rafischer.com/wp-content/uploads/2019/10/traveling-iontophoresis-machine-ra-fischer-header.png");
+    background-image: url("../images/background.jpeg");
     background-position:center;
     background-attachment: fixed;
     background-size: cover;
