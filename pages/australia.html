@@ -1,381 +1,651 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!--Bootstrap css-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    
-    <!--Local css-->
-    <link href="../styles/main.css" rel="stylesheet">
-        
-    <!--map--> 
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type='text/javascript'>
-        // based on https://groups.google.com/g/google-visualization-api/c/lIVZFUz8uB4?pli=1
-        google.charts.load('current', {'packages':['geochart'], });
-        google.charts.setOnLoadCallback(drawRegionsMap);
-        
-        function drawRegionsMap() {
-            var data = google.visualization.arrayToDataTable([
-                  ['Country'],
-                  ['Australia'],
-                  
-                ]);
-        
-        
-        var options = {
-            defaultColor: '#064A74', // grey:'#6c757d',
-            backgroundColor: 'antiquewhite',
-            datalessRegionColor: '#DCDCDC',
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        //region: 'world', resolution: 'continents',
+    <!--Bootstrap css-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <!--Local css-->
+    <link href="../styles/main.css" rel="stylesheet" />
+
+    <!--map-->
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript">
+      // based on https://groups.google.com/g/google-visualization-api/c/lIVZFUz8uB4?pli=1
+      google.charts.load("current", { packages: ["geochart"] });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ["Country"],
+          ["Australia"],
+        ]);
+
+        var options = {
+          defaultColor: "#064A74", // grey:'#6c757d',
+          backgroundColor: "antiquewhite",
+          datalessRegionColor: "#DCDCDC",
+
+          //region: 'world', resolution: 'continents',
         };
-        
-        var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
-                        
+
+        var chart = new google.visualization.GeoChart(
+          document.getElementById("chart_div")
+        );
+
         chart.draw(data, options);
-        
-        
-        };
-        </script>
+      }
+    </script>
 
     <title>Australia</title>
-</head>
-<body>
-
-    <!--Header-->
-    <div class="top-header">
+  </head>
+  <body>
+    <div class="wrapper">
+      <!--Header-->
+      <div class="top-header">
         <h2>TRAVEL PROJECT</h2>
-    </div>
-    
-    <!--Navbar-->
-    <nav>
+      </div>
+
+      <!--Navbar-->
+      <nav>
         <ul class="main-nav">
-            
-            <!--Rest-->
-            <li class="push-right">
-                <div id="navbar-right">
-                    <ul>
-                        <li><a href="../index.html">HOME</a></li>
-                        <li><a href="places.html">PLACES</a></li>
-                        <li><a href="blogs.html">BLOGS</a></li>
-                        <li><a href="contact.html">CONTACT</a></li>
-                    </ul>
-                </div>
-            </li>
-        
-            <!---Dropdown-->
-            <li>
-                <div class="dropdown">
-                    <button class="btn drop btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    EXPLORE
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="../index.html">Home</a></li>
-                        <li><a class="dropdown-item" href="australia.html">Australia</a></li>
-                        <li><a class="dropdown-item" href="brazil.html">Brazil</a></li>
-                        <li><a class="dropdown-item" href="canada.html">Canada</a></li>
-                        <li><a class="dropdown-item" href="france.html">France</a></li>
-                        <li><a class="dropdown-item" href="germany.html">Germany</a></li>
-                        <li><a class="dropdown-item" href="india.html">India</a></li>
-                        <li><a class="dropdown-item" href="japan.html">Japan</a></li>
-                        <li><a class="dropdown-item" href="tanzania.html">Tanzania</a></li>
-                        <li><a class="dropdown-item" href="turkey.html">Turkey</a></li>
-                        <!--<li><a class="dropdown-item" href="uk.html">United Kingdom</a></li>-->
-                        <li><a class="dropdown-item" href="usa.html">United States</a></li>
-                    
-                    </ul>
-                </div>
-            </li>
+          <!--Rest-->
+          <li class="push-right">
+            <div id="navbar-right">
+              <ul>
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="places.html">PLACES</a></li>
+                <li><a href="blogs.html">BLOGS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <!---Dropdown-->
+          <li>
+            <div class="dropdown">
+              <button
+                class="btn drop btn-secondary dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                EXPLORE
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="../index.html">Home</a></li>
+                <li>
+                  <a class="dropdown-item" href="australia.html">Australia</a>
+                </li>
+                <li><a class="dropdown-item" href="brazil.html">Brazil</a></li>
+                <li><a class="dropdown-item" href="canada.html">Canada</a></li>
+                <li><a class="dropdown-item" href="france.html">France</a></li>
+                <li>
+                  <a class="dropdown-item" href="germany.html">Germany</a>
+                </li>
+                <li><a class="dropdown-item" href="india.html">India</a></li>
+                <li><a class="dropdown-item" href="japan.html">Japan</a></li>
+                <li>
+                  <a class="dropdown-item" href="tanzania.html">Tanzania</a>
+                </li>
+                <li><a class="dropdown-item" href="turkey.html">Turkey</a></li>
+                <!--<li><a class="dropdown-item" href="uk.html">United Kingdom</a></li>-->
+                <li>
+                  <a class="dropdown-item" href="usa.html">United States</a>
+                </li>
+              </ul>
+            </div>
+          </li>
         </ul>
+      </nav>
 
-    </nav>
-
-        
-    <div class="container-fluid">
+      <div class="container-fluid">
         <div class="row countries">
-            <!--Side bar-->
-            <aside class="col-md-5 col-lg-2" style="height: 551px; margin-top: 10px; display:inline-table">
-                
-                <!--Map-->
-                <div class="heading"><h5>Australia</h5></div>
-                <div id="chart_div" style="width: 222px;"></div>
+          <!--Side bar-->
+          <aside
+            class="col-md-5 col-lg-2"
+            style="height: 551px; margin-top: 10px; display: inline-table"
+          >
+            <!--Map-->
+            <div class="heading"><h5>Australia</h5></div>
+            <div id="chart_div" style="width: 222px"></div>
 
-                <!--Quick facts-->
-                <hr>
-                <div class="facts">
-                    <h5>Quick facts</h5>
-                    <ul>
-                        <li><h5>Population:</h5>25.69 million<br></li>
-                        <li><h5>Languages spoken:</h5> English<br></li>
-                        <li><h5>Capital city:</h5> Canberra</li>
-                        <li><h5>Safety rating:</h5> According to the Global Peace Index 2022, Australia is number 27 
-                            out of 163 countries<br> </li>
-                        <li><h5>Current time:</h5> There are 6 time zones in Australia. Australia's mainland states and 
-                          territories are divided into 5 standard time zones.The six main time zones are:<br>
-                            <i>Australian Western Standard Time (AWST)</i> = UTC +8<br>
-                            <i>Australian Central Western Standard Time (ACWST)</i> = UTC +8:45<br>
-                            <i>Australian Central Standard Time (ACST)</i> UTC +9:30<br>
-                            <i>Australian Eastern Standard Time (AEST)</i> = UTC +10 <br>
-                            <i>Australian Central Daylight Time (ACDT)</i> UTC +10.30,<br>
-                            <i>Australian Eastern Daylight Time (AEST)</i> UTC +11<br>
-                            <!--source https://www.timeanddate.com/time/zone/australia-->
+            <!--Quick facts-->
+            <hr />
+            <div class="facts">
+              <h5>Quick facts</h5>
+              <ul>
+                <li>
+                  <h5>Population:</h5>
+                  25.69 million<br />
+                </li>
+                <li>
+                  <h5>Languages spoken:</h5>
+                  English<br />
+                </li>
+                <li>
+                  <h5>Capital city:</h5>
+                  Canberra
+                </li>
+                <li>
+                  <h5>Safety rating:</h5>
+                  According to the Global Peace Index 2022, Australia is number
+                  27 out of 163 countries<br />
+                </li>
+                <li>
+                  <h5>Current time:</h5>
+                  There are 6 time zones in Australia. Australia's mainland
+                  states and territories are divided into 5 standard time
+                  zones.The six main time zones are:<br />
+                  <i>Australian Western Standard Time (AWST)</i> = UTC +8<br />
+                  <i>Australian Central Western Standard Time (ACWST)</i> = UTC
+                  +8:45<br />
+                  <i>Australian Central Standard Time (ACST)</i> UTC +9:30<br />
+                  <i>Australian Eastern Standard Time (AEST)</i> = UTC +10
+                  <br />
+                  <i>Australian Central Daylight Time (ACDT)</i> UTC +10.30,<br />
+                  <i>Australian Eastern Daylight Time (AEST)</i> UTC +11<br />
+                  <!--source https://www.timeanddate.com/time/zone/australia-->
 
-                            <!--Time widget 
+                  <!--Time widget 
                                 from https://logwork.com/clock-widget-text-->
-                            <div class="clock">
-                              <script src="https://cdn.logwork.com/widget/text.js"></script>
-                              <a href="https://logwork.com/current-time-in-canberra-australia-australian-capital-territory" 
-                              class="clock-widget-text" data-timezone="Australia/Sydney" data-language="en">Canberra, Australia, 
-                              Australian Capital Territory</a>
-                            </div>
-                           
-                            
-                        </li>
-                        <!--Currency-->
-                        <li><h5>Local currency:</h5> Australian dollar (AUD)<br>
-                            <div class="currency">
-                                <!-- Currency Converter Script - FxExchangeRate.com - https://www.fxexchangerate.com/exchange-rates-widget.html -->
-                                <div style="font-size:16px; font-family: sans-serif,Arial, Helvetica;width:198px; line-height:24px;border:1px solid #4A4A4A;background-color:#D6D6D6;margin:0px;">
-                                    <div style="background-color:#4A4A4A;height:2.2rem;color:#FFFFFF; font-weight:bold;text-align:left;padding:6px 0 0 6px; max-width:100%;">
-                                    <i style="background-size: contain;background-position: 50%;background-repeat: no-repeat; position: relative;display: inline-block;width: 1.33333333em;line-height: 1em; padding:0 8px 0 0px;font-size:18px;background-image:url(https://w.fxexchangerate.com/static/flags/gbp.webp);">&nbsp;</i>
-                                    <a rel="nofollow" style="color:#FFFFFF;padding-left:5px;text-decoration:none;" href="https://gbp.fxexchangerate.com">British Pound</a>
-                                  </div><script type="text/javascript" src="https://w.fxexchangerate.com/converter.php?fm=GBP&ft=AUD,&lg=en&am=1&ty=2">
+                  <div class="clock">
+                    <script src="https://cdn.logwork.com/widget/text.js"></script>
+                    <a
+                      href="https://logwork.com/current-time-in-canberra-australia-australian-capital-territory"
+                      class="clock-widget-text"
+                      data-timezone="Australia/Sydney"
+                      data-language="en"
+                      >Canberra, Australia, Australian Capital Territory</a
+                    >
+                  </div>
+                </li>
+                <!--Currency-->
+                <li>
+                  <h5>Local currency:</h5>
+                  Australian dollar (AUD)<br />
+                  <div class="currency">
+                    <!-- Currency Converter Script - FxExchangeRate.com - https://www.fxexchangerate.com/exchange-rates-widget.html -->
+                    <div
+                      style="
+                        font-size: 16px;
+                        font-family: sans-serif, Arial, Helvetica;
+                        width: 198px;
+                        line-height: 24px;
+                        border: 1px solid #4a4a4a;
+                        background-color: #d6d6d6;
+                        margin: 0px;
+                      "
+                    >
+                      <div
+                        style="
+                          background-color: #4a4a4a;
+                          height: 2.2rem;
+                          color: #ffffff;
+                          font-weight: bold;
+                          text-align: left;
+                          padding: 6px 0 0 6px;
+                          max-width: 100%;
+                        "
+                      >
+                        <i
+                          style="
+                            background-size: contain;
+                            background-position: 50%;
+                            background-repeat: no-repeat;
+                            position: relative;
+                            display: inline-block;
+                            width: 1.33333333em;
+                            line-height: 1em;
+                            padding: 0 8px 0 0px;
+                            font-size: 18px;
+                            background-image: url(https://w.fxexchangerate.com/static/flags/gbp.webp);
+                          "
+                          >&nbsp;</i
+                        >
+                        <a
+                          rel="nofollow"
+                          style="
+                            color: #ffffff;
+                            padding-left: 5px;
+                            text-decoration: none;
+                          "
+                          href="https://gbp.fxexchangerate.com"
+                          >British Pound</a
+                        >
+                      </div>
+                      <script
+                        type="text/javascript"
+                        src="https://w.fxexchangerate.com/converter.php?fm=GBP&ft=AUD,&lg=en&am=1&ty=2"
+                      ></script>
+                    </div>
+                    <!--  End of Currency Converter Script -  FxExchangeRate.com -->
+                  </div>
+                </li>
+              </ul>
+            </div>
 
-                                  </script>
-                                  </div>
-                                  <!--  End of Currency Converter Script -  FxExchangeRate.com -->
-                            </div>
-                        </li>
-                        
-                    </ul>
+            <!--Weather widget-->
+            <div class="weather">
+              <hr />
+              <div class="heading"><h5>Current Weather</h5></div>
+              <a
+                class="weatherwidget-io"
+                href="https://forecast7.com/en/n25d27133d78/australia/"
+                data-label_1="AUSTRALIA"
+                data-label_2="WEATHER"
+                data-days="3"
+                >AUSTRALIA WEATHER</a
+              >
+              <script>
+                !(function (d, s, id) {
+                  var js,
+                    fjs = d.getElementsByTagName(s)[0];
+                  if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = "https://weatherwidget.io/js/widget.min.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                  }
+                })(document, "script", "weatherwidget-io-js");
+              </script>
+            </div>
+
+            <!--Travel advice link-->
+            <hr />
+            <div class="advice">
+              <div class="heading"><h5>Travel Advice</h5></div>
+              <p>
+                For more information and travel advice, please visit Foreign
+                travel advice at gov.uk here:
+              </p>
+              <a
+                class="btn btn-secondary"
+                href="https://www.gov.uk/foreign-travel-advice/australia/entry-requirements"
+                target="_blank"
+                role="button"
+                >Travel advice</a
+              >
+            </div>
+
+            <!--Accommodation link-->
+            <hr />
+            <div class="advice">
+              <div class="heading"><h5>Accommodation</h5></div>
+              <p>
+                To view and book accommodation, please visit booking.com here:
+              </p>
+              <a
+                class="btn btn-secondary"
+                href="https://www.booking.com/index.en-gb.html"
+                target="_blank"
+                role="button"
+                >Accommodation</a
+              >
+            </div>
+          </aside>
+
+          <!--Main text-->
+
+          <main
+            class="col-md-7 col-lg-8"
+            style="margin-bottom: 0px; margin-top: 0px; padding-top: 10px"
+          >
+            <h1>Australia</h1>
+            <div class="main-text">
+              <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
+                <p class="col">
+                  Australia is a country and continent located in the southern
+                  hemisphere. Its official name is the Commonwealth of Australia
+                  and it is made up of six states and two territories. It is the
+                  world's sixth-largest country by total area, covering
+                  approximately 7.7 million square kilometers.<br /><br />
+                </p>
+                <img
+                  class="col"
+                  src="https://cdn.britannica.com/78/6078-050-18D5DEFE/Flag-Australia.jpg"
+                  alt="Australian Flag"
+                />
+              </div>
+              <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
+                <img
+                  class="col"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLZRRiHNjrqZc9MXIhWyB4PJ0SjDp0XRksvBeP_Cz-zwxMcmTEKsy48994BuRG_EL3U1w&usqp=CAU"
+                  alt="Aboriginal Tribe"
+                />
+                <p class="col">
+                  Australia has a diverse population of around 25 million
+                  people, with English being the primary language spoken.
+                  However, due to its history of immigration from a variety of
+                  countries, there are many different languages heard throughout
+                  the country.
+                </p>
+              </div>
+
+              <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
+                <p class="col">
+                  Australia is known for its unique wildlife, such as kangaroos,
+                  koalas, and wallabies, as well as its iconic landmarks like
+                  the Sydney Opera House and Uluru (also known as Ayers
+                  Rock).The economy of Australia is highly developed, with a
+                  focus on natural resources, such as coal, iron ore, and gold,
+                  as well as tourism, agriculture, and education. Australia is
+                  also known for its sporting achievements, including in
+                  cricket, rugby, swimming, and athletics.<br /><br />
+                </p>
+                <img
+                  class="col"
+                  src="https://imageio.forbes.com/specials-images/imageserve/6165fd031a20c40040dc6493/0x0.jpg?format=jpg&crop=2020,1136,x0,y102,safe&width=1200"
+                  alt="kangaroos australia"
+                />
+              </div>
+
+              <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
+                <img
+                  class="col"
+                  src="https://a.cdn-hotels.com/gdcs/production5/d1996/54fdb73f-eee5-4612-a3e7-6fc7ed2f7bee.jpg?impolicy=fcrop&w=800&h=533&q=medium"
+                  alt="Sydney Opera house"
+                />
+                <p class="col">
+                  The capital city of Australia is Canberra, and its largest
+                  city is Sydney. Other major cities include Melbourne,
+                  Brisbane, Perth, Adelaide, and Hobart. Australia has a high
+                  standard of living and is considered a desirable place to live
+                  and work. Its healthcare system is ranked highly
+                  internationally and the country has a strong education system.
+                  The Australian government is a federal parliamentary democracy
+                  and a member of the United Nations.
+                </p>
+              </div>
+
+              <div class="source">
+                Source:
+                <a
+                  href="https://www.britannica.com/place/australia"
+                  target="_blank"
+                >
+                  Britannica.com</a
+                >
+              </div>
+            </div>
+            <br />
+
+            <!--Things To Do-->
+            <h3>Things to do</h3>
+            <div class="text">
+              <div class="to-do">
+                <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
+                  <div class="col to-do-text">
+                    <h5>Discover the Great Ocean Road</h5>
+                    <p>
+                      Stretching along the south-eastern coast of Australia, it
+                      offers stunning scenery and beautiful landscapes. The
+                      Great Ocean Road is an Australian National Heritage listed
+                      240-kilometre stretch of road along the south-eastern
+                      coast of Australia between the Victorian cities of Torquay
+                      and Allansford.
+                    </p>
+                  </div>
+                  <img
+                    class="col"
+                    src="https://i.natgeofe.com/n/ea27bd3b-ab91-4997-99c6-3659179290cd/great-ocean-road-australia-590_4x3.jpg"
+                    alt="the Great Ocean Road"
+                  />
+                </div>
+                <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
+                  <div class="col to-do-text">
+                    <h5>Explore the Great Barrier Reef</h5>
+                    <p>
+                      The Great Barrier Reef is the largest living thing on
+                      Earth and is visible from outer space! This incredible
+                      eco-system is 2,300km long. There are thousands of reefs
+                      and hundreds of islands. There are 600 types of hard and
+                      soft coral. It is best explored through scuba diving or
+                      snorkeling.
+                    </p>
+                  </div>
+                  <img
+                    class="col"
+                    src="https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6a/d9/3e.jpg"
+                    alt="The Great Barrier Reef"
+                  />
+                </div>
+                <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
+                  <div class="col to-do-text">
+                    <h5>Visit Uluru</h5>
+                    <p>
+                      An important cultural landmark for the indigenous people
+                      of Australia, Uluru is a sacred site in the heart of
+                      Central Australia. Uluru is probably Australia's most
+                      famous natural icon. This huge sandstone monolith stands
+                      1,142 ft above ground (taller than Eiffel Tower 984 ft).
+                    </p>
+                  </div>
+                  <img
+                    class="col"
+                    src="../images/australia2.jpeg"
+                    alt="Face Uluru Ayers Rock Australia"
+                  />
+                </div>
+                <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
+                  <div class="col to-do-text">
+                    <h5>Visit the Sydney Opera House</h5>
+                    <p>
+                      The iconic structure of Sydney is a must-visit attraction.
+                      You can attend a concert or a show or take a guided tour
+                      of the building. The Sydney Opera House is a multi-venue
+                      performing arts centre in Sydney. It is widely regarded as
+                      one of the world's most famous and distinctive buildings
+                      and a masterpiece of 20th-century architecture
+                    </p>
+                  </div>
+                  <img
+                    class="col"
+                    src="https://a.cdn-hotels.com/gdcs/production5/d1996/54fdb73f-eee5-4612-a3e7-6fc7ed2f7bee.jpg?impolicy=fcrop&w=800&h=533&q=medium"
+                    alt="Opera House Syndney"
+                  />
                 </div>
 
-                <!--Weather widget-->
-                <div class="weather">
-                    <hr>
-                    <div class="heading"><h5>Current Weather</h5></div>
-                    <a class="weatherwidget-io" href="https://forecast7.com/en/n25d27133d78/australia/" data-label_1="AUSTRALIA" data-label_2="WEATHER" data-days="3" >AUSTRALIA WEATHER</a>
-                    <script>
-                        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-                    </script>
-                </div>    
-
-                <!--Travel advice link-->
-                <hr>
-                <div class="advice">
-                    <div class="heading"><h5>Travel Advice</h5></div>
-                    <p>For more information and travel advice, please visit Foreign travel advice at gov.uk here:</p>
-                    <a class="btn btn-secondary" href="https://www.gov.uk/foreign-travel-advice/australia/entry-requirements"  target="_blank" role="button">Travel advice</a>
+                <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
+                  <div class="col to-do-text">
+                    <h5>Safari in the Australian Outback</h5>
+                    <p>
+                      The vast and beautiful Australian Outback provides a
+                      perfect escape to experience the bush, wildlife, and a
+                      taste of Australia's unique cultural heritage.
+                    </p>
+                  </div>
+                  <img
+                    class="col"
+                    src="https://www.zicasso.com/static/b428b2e2bfd19f318086baee0e6b6e53/28a23/b428b2e2bfd19f318086baee0e6b6e53.jpg"
+                    alt="kangaroo safari"
+                  />
                 </div>
+              </div>
+            </div>
 
-                <!--Accommodation link-->
-                <hr>
-                <div class="advice">
-                    <div class="heading"><h5>Accommodation</h5></div>
-                    <p>To view and book accommodation, please visit booking.com here: </p>
-                    <a class="btn btn-secondary" href="https://www.booking.com/index.en-gb.html"  target="_blank" role="button">Accommodation</a>
+            <!--Photo gallery-->
+
+            <h3>Photo Gallery</h3>
+            <div
+              id="carouselExampleIndicators"
+              class="carousel slide"
+              data-bs-ride="true"
+              style="max-width: 500px"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="3"
+                  aria-label="Slide 4"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="4"
+                  aria-label="Slide 5"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="5"
+                  aria-label="Slide 6"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="../images/australia1.jpeg"
+                    class="d-block w-100"
+                    alt="Dove-Lake-part-Cradle-Mountain-St-Clair"
+                  />
+                  <div
+                    id="australia-1-info"
+                    class="carousel-caption d-none d-md-block"
+                  >
+                    <h5>Dove Lake part Cradle Mountain</h5>
+                  </div>
                 </div>
-                               
-                         
-            </aside>
-
-            <!--Main text-->
-
-            <main class="col-md-7 col-lg-8" style="margin-bottom: 0px; margin-top: 0px; padding-top: 10px;">
-                <h1>Australia</h1>
-                <div class="main-text">
-                    <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
-                        <p class="col">Australia is a country and continent located in the southern hemisphere. Its official name is the Commonwealth of 
-                          Australia and it is made up of six states and two territories. It is the world's sixth-largest country by total area, covering 
-                          approximately 7.7 million square kilometers.<br><br>
-                        </p>
-                        <img class="col" src="https://cdn.britannica.com/78/6078-050-18D5DEFE/Flag-Australia.jpg" alt="Australian Flag">
-                    </div>
-                    <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
-                        <img class="col" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLZRRiHNjrqZc9MXIhWyB4PJ0SjDp0XRksvBeP_Cz-zwxMcmTEKsy48994BuRG_EL3U1w&usqp=CAU" alt="Aboriginal Tribe">
-                        <p class="col">
-                          Australia has a diverse population of around 25 million people, with English being the primary language spoken. However, due to its history of immigration 
-                          from a variety of countries, there are many different languages heard throughout the country. 
-                        </p>
-
-                    </div>
-
-                    <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
-                        <p class="col">
-                          Australia is known for its unique wildlife, such as kangaroos, koalas, and wallabies, as well as its iconic landmarks 
-                          like the Sydney Opera House and Uluru (also known as Ayers Rock).The economy of Australia is highly developed, with a 
-                          focus on natural resources, such as coal, iron ore, and gold, as well as tourism, agriculture, and education. Australia 
-                          is also known for its sporting achievements, including in cricket, rugby, swimming, and athletics.<br><br>
-                        </p>
-                        <img class="col" src="https://imageio.forbes.com/specials-images/imageserve/6165fd031a20c40040dc6493/0x0.jpg?format=jpg&crop=2020,1136,x0,y102,safe&width=1200" alt="kangaroos australia">
-                    </div>
-
-                    
-                    <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
-                        <img class="col" src="https://a.cdn-hotels.com/gdcs/production5/d1996/54fdb73f-eee5-4612-a3e7-6fc7ed2f7bee.jpg?impolicy=fcrop&w=800&h=533&q=medium" alt="Sydney Opera house">
-                        <p class="col">
-                          The capital city of Australia is Canberra, and its largest city is Sydney. 
-                          Other major cities include Melbourne, Brisbane, Perth, Adelaide, and Hobart.
-                          Australia has a high standard of living and is considered a desirable place to 
-                          live and work. Its healthcare system is ranked highly internationally and the country 
-                          has a strong education system. The Australian government is a federal parliamentary democracy 
-                          and a member of the United Nations. 
-                        </p>
-
-                    </div>    
-                                                   
-
-                
-                    <div class="source">
-                        Source: <a href="https://www.britannica.com/place/australia" target="_blank"> Britannica.com</a>
-                    </div>
+                <div class="carousel-item">
+                  <img
+                    src="../images/australia2.jpeg"
+                    class="d-block w-100"
+                    alt="face-Uluru-Ayers-Rock-Australia-Northern-Territory"
+                  />
+                  <div
+                    id="australia-2-info"
+                    class="carousel-caption d-none d-md-block"
+                  >
+                    <h5>Face Uluru Ayers Rock Australia</h5>
+                  </div>
                 </div>
-                <br>
-
-                <!--Things To Do-->
-                <h3>Things to do</h3>
-                <div class="text">
-                    <div class="to-do">
-                        <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
-                          <div class="col to-do-text">
-                            <h5>Discover the Great Ocean Road</h5>
-                            <p>Stretching along the south-eastern coast of Australia, it offers stunning scenery and beautiful 
-                              landscapes. The Great Ocean Road is an Australian National Heritage listed 240-kilometre stretch of 
-                              road along the south-eastern coast of Australia between the Victorian cities of Torquay and Allansford.
-                                
-                            </p>
-                         </div>
-                         <img class="col" src="https://i.natgeofe.com/n/ea27bd3b-ab91-4997-99c6-3659179290cd/great-ocean-road-australia-590_4x3.jpg" alt="the Great Ocean Road">
-                            
-                        </div>
-                        <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
-                            <div class="col to-do-text">
-                                <h5>Explore the Great Barrier Reef</h5>
-                                <p>The Great Barrier Reef is the largest living thing on Earth and is visible from outer space! This incredible eco-system is 2,300km long. 
-                                  There are thousands of reefs and 
-                                  hundreds of islands. There are 600 types of hard and soft coral. It is best explored through scuba diving or snorkeling.
-                                </p>
-                            </div>
-                            <img class="col" src="https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6a/d9/3e.jpg" alt="The Great Barrier Reef">
-                        </div>
-                        <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
-                             <div class="col to-do-text">
-                                <h5>Visit Uluru</h5> 
-                                <p>An important cultural landmark for the indigenous people of Australia, Uluru is a sacred site 
-                                  in the heart of Central Australia. Uluru is probably Australia's most famous natural icon. This huge sandstone monolith stands 
-                                  1,142 ft above ground (taller than Eiffel Tower 984 ft).
-                                </p>
-                            </div>
-                            <img class="col" src="../images/australia2.jpeg" alt="Face Uluru Ayers Rock Australia">
-                        </div>    
-                        <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
-                            <div class="col to-do-text">
-                              <h5>Visit the Sydney Opera House</h5>
-                              <p>The iconic structure of Sydney is a must-visit attraction. You can attend a concert or a 
-                              show or take a guided tour of the building. The Sydney Opera House is a multi-venue performing 
-                              arts centre in Sydney. It is widely regarded as one of the world's most famous and distinctive 
-                              buildings and a masterpiece of 20th-century architecture                               
-                              </p>
-                            </div>
-                            <img class="col" src="https://a.cdn-hotels.com/gdcs/production5/d1996/54fdb73f-eee5-4612-a3e7-6fc7ed2f7bee.jpg?impolicy=fcrop&w=800&h=533&q=medium" alt="Opera House Syndney">
-                            
-                        </div>
-
-                        <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
-                            <div class="col to-do-text">
-                                <h5>Safari in the Australian Outback</h5> 
-                                <p>The vast and beautiful Australian Outback provides a perfect escape to experience the bush, wildlife, 
-                                  and a taste of Australia's unique cultural heritage.
-                                </p>
-                            </div>
-                            <img class="col" src="https://www.zicasso.com/static/b428b2e2bfd19f318086baee0e6b6e53/28a23/b428b2e2bfd19f318086baee0e6b6e53.jpg" alt="kangaroo safari">
-                        </div>                    
-                    </div>
-                                               
-                
+                <div class="carousel-item">
+                  <img
+                    src="../images/australia3.jpeg"
+                    class="d-block w-100"
+                    alt="School-of-fish-Great-Barrier-Reef-Queensland"
+                  />
+                  <div
+                    id="australia-3-info"
+                    class="carousel-caption d-none d-md-block"
+                  >
+                    <h5>School of fish Great Barrier Reef Queensland</h5>
+                  </div>
                 </div>
+                <div class="carousel-item">
+                  <img
+                    src="../images/australia4.jpeg"
+                    class="d-block w-100"
+                    alt="The-Three-Sisters-Blue-Mountains-Australia-New"
+                  />
+                  <div
+                    id="australia-4-info"
+                    class="carousel-caption d-none d-md-block"
+                  >
+                    <h5>The Three Sisters Blue Mountains</h5>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://imageio.forbes.com/specials-images/imageserve/6165fd031a20c40040dc6493/0x0.jpg?format=jpg&crop=2020,1136,x0,y102,safe&width=1200"
+                    class="d-block w-100"
+                    alt="kangaroos australia"
+                  />
+                  <div
+                    id="australia-5-info"
+                    class="carousel-caption d-none d-md-block"
+                  >
+                    <h5>Kangaroos symbol of australia</h5>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://www.worldatlas.com/r/w960-q80/upload/d5/c1/f0/shutterstock-156828686.jpg"
+                    class="d-block w-100"
+                    alt="koala in australia"
+                  />
+                  <div
+                    id="australia-6-info"
+                    class="carousel-caption d-none d-md-block"
+                  >
+                    <h5>koala</h5>
+                  </div>
+                </div>
+              </div>
 
-                <!--Photo gallery-->
-                
-                <h3>Photo Gallery</h3>
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" style="max-width: 500px">
-                    <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                    </div>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="../images/australia1.jpeg" class="d-block w-100" alt="Dove-Lake-part-Cradle-Mountain-St-Clair">
-                        <div id="australia-1-info" class="carousel-caption d-none d-md-block">
-                            <h5>Dove Lake part Cradle Mountain</h5>
-                        </div>
-                    </div>
-                          <div class="carousel-item">
-                            <img src="../images/australia2.jpeg" class="d-block w-100" alt="face-Uluru-Ayers-Rock-Australia-Northern-Territory">
-                            <div id="australia-2-info" class="carousel-caption d-none d-md-block">
-                                <h5>Face Uluru Ayers Rock Australia</h5>
-                              </div>
-                          </div>
-                          <div class="carousel-item">
-                            <img src="../images/australia3.jpeg" class="d-block w-100" alt="School-of-fish-Great-Barrier-Reef-Queensland">
-                            <div id="australia-3-info" class="carousel-caption d-none d-md-block">
-                                <h5>School of fish Great Barrier Reef Queensland</h5>  
-                              </div>
-                          </div>
-                          <div class="carousel-item">
-                            <img src="../images/australia4.jpeg" class="d-block w-100" alt="The-Three-Sisters-Blue-Mountains-Australia-New">
-                            <div id="australia-4-info" class="carousel-caption d-none d-md-block">
-                                <h5>The Three Sisters Blue Mountains</h5>  
-                              </div>
-                          </div>
-                          <div class="carousel-item">
-                            <img src="https://imageio.forbes.com/specials-images/imageserve/6165fd031a20c40040dc6493/0x0.jpg?format=jpg&crop=2020,1136,x0,y102,safe&width=1200" class="d-block w-100" alt="kangaroos australia">
-                            <div id="australia-5-info" class="carousel-caption d-none d-md-block">
-                                <h5>Kangaroos symbol of australia</h5>  
-                              </div>
-                          </div>
-                          <div class="carousel-item">
-                            <img src="https://www.worldatlas.com/r/w960-q80/upload/d5/c1/f0/shutterstock-156828686.jpg" class="d-block w-100" alt="koala in australia">
-                            <div id="australia-6-info" class="carousel-caption d-none d-md-block">
-                                <h5>koala</h5>  
-                              </div>
-                          </div>
-                        </div>
-                          
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                              <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                              <span class="visually-hidden">Next</span>
-                            </button>
-                          </div>
-                          <br>
-
-                
-             
-               
-            </main>
-     
-          </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <br />
+          </main>
         </div>
-    
-    <footer>
-        Copyright &#169; 2023 <br>
+      </div>
+
+      <footer>
+        Copyright &#169; 2023 <br />
         Team 4
-    </footer>
-
+      </footer>
+    </div>
     <!--Bootstrap js-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

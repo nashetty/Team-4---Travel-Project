@@ -1,352 +1,651 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!--Bootstrap css-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    
-    <!--Local css-->
-    <link href="../styles/main.css" rel="stylesheet">
-        
-    <!--map--> 
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type='text/javascript'>
-        // based on https://groups.google.com/g/google-visualization-api/c/lIVZFUz8uB4?pli=1
-        google.charts.load('current', {'packages':['geochart'], });
-        google.charts.setOnLoadCallback(drawRegionsMap);
-        
-        function drawRegionsMap() {
-            var data = google.visualization.arrayToDataTable([
-                  ['Country'],
-                  ['United States'],
-                  
-                ]);
-        
-        
-        var options = {
-            defaultColor: '#064A74', // grey:'#6c757d',
-            backgroundColor: 'antiquewhite',
-            datalessRegionColor: '#DCDCDC',
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        //region: 'world', resolution: 'continents',
+    <!--Bootstrap css-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <!--Local css-->
+    <link href="../styles/main.css" rel="stylesheet" />
+
+    <!--map-->
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript">
+      // based on https://groups.google.com/g/google-visualization-api/c/lIVZFUz8uB4?pli=1
+      google.charts.load("current", { packages: ["geochart"] });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ["Country"],
+          ["United States"],
+        ]);
+
+        var options = {
+          defaultColor: "#064A74", // grey:'#6c757d',
+          backgroundColor: "antiquewhite",
+          datalessRegionColor: "#DCDCDC",
+
+          //region: 'world', resolution: 'continents',
         };
-        
-        var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
-                        
+
+        var chart = new google.visualization.GeoChart(
+          document.getElementById("chart_div")
+        );
+
         chart.draw(data, options);
-        
-        
-        };
-        </script>
+      }
+    </script>
 
     <title>United States</title>
-</head>
-<body>
-
-    <!--Header-->
-    <div class="top-header">
+  </head>
+  <body>
+    <div class="wrapper">
+      <!--Header-->
+      <div class="top-header">
         <h2>TRAVEL PROJECT</h2>
-    </div>
-    
-    <!--Navbar-->
-    <nav>
+      </div>
+
+      <!--Navbar-->
+      <nav>
         <ul class="main-nav">
-            
-            <!--Rest-->
-            <li class="push-right">
-                <div id="navbar-right">
-                    <ul>
-                        <li><a href="../index.html">HOME</a></li>
-                        <li><a href="places.html">PLACES</a></li>
-                        <li><a href="blogs.html">BLOGS</a></li>
-                        <li><a href="contact.html">CONTACT</a></li>
-                    </ul>
-                </div>
-            </li>
-        
-            <!---Dropdown-->
-            <li>
-                <div class="dropdown">
-                    <button class="btn drop btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    EXPLORE
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="../index.html">Home</a></li>
-                        <li><a class="dropdown-item" href="australia.html">Australia</a></li>
-                        <li><a class="dropdown-item" href="brazil.html">Brazil</a></li>
-                        <li><a class="dropdown-item" href="canada.html">Canada</a></li>
-                        <li><a class="dropdown-item" href="france.html">France</a></li>
-                        <li><a class="dropdown-item" href="germany.html">Germany</a></li>
-                        <li><a class="dropdown-item" href="india.html">India</a></li>
-                        <li><a class="dropdown-item" href="japan.html">Japan</a></li>
-                        <li><a class="dropdown-item" href="tanzania.html">Tanzania</a></li>
-                        <li><a class="dropdown-item" href="turkey.html">Turkey</a></li>
-                        <!--<li><a class="dropdown-item" href="uk.html">United Kingdom</a></li>-->
-                        <li><a class="dropdown-item" href="usa.html">United States</a></li>
-                    
-                    </ul>
-                </div>
-            </li>
+          <!--Rest-->
+          <li class="push-right">
+            <div id="navbar-right">
+              <ul>
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="places.html">PLACES</a></li>
+                <li><a href="blogs.html">BLOGS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <!---Dropdown-->
+          <li>
+            <div class="dropdown">
+              <button
+                class="btn drop btn-secondary dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                EXPLORE
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="../index.html">Home</a></li>
+                <li>
+                  <a class="dropdown-item" href="australia.html">Australia</a>
+                </li>
+                <li><a class="dropdown-item" href="brazil.html">Brazil</a></li>
+                <li><a class="dropdown-item" href="canada.html">Canada</a></li>
+                <li><a class="dropdown-item" href="france.html">France</a></li>
+                <li>
+                  <a class="dropdown-item" href="germany.html">Germany</a>
+                </li>
+                <li><a class="dropdown-item" href="india.html">India</a></li>
+                <li><a class="dropdown-item" href="japan.html">Japan</a></li>
+                <li>
+                  <a class="dropdown-item" href="tanzania.html">Tanzania</a>
+                </li>
+                <li><a class="dropdown-item" href="turkey.html">Turkey</a></li>
+                <!--<li><a class="dropdown-item" href="uk.html">United Kingdom</a></li>-->
+                <li>
+                  <a class="dropdown-item" href="usa.html">United States</a>
+                </li>
+              </ul>
+            </div>
+          </li>
         </ul>
+      </nav>
 
-    </nav>
-
-        
-    <div class="container-fluid">
+      <div class="container-fluid">
         <div class="row countries">
-            <!--Side bar-->
-            <aside class="col-md-5 col-lg-2" style="height: 551px; margin-top: 10px; display:inline-table">
-                
-                <!--Map-->
-                <div class="heading"><h5>United States</h5></div>
-                <div id="chart_div" style="width: 222px;"></div>
+          <!--Side bar-->
+          <aside
+            class="col-md-5 col-lg-2"
+            style="height: 551px; margin-top: 10px; display: inline-table"
+          >
+            <!--Map-->
+            <div class="heading"><h5>United States</h5></div>
+            <div id="chart_div" style="width: 222px"></div>
 
-                <!--Quick facts-->
-                <hr>
-                <div class="facts">
-                    <h5>Quick facts</h5>
-                    <ul>
-                        <li><h5>Population:</h5>336.2 million<br></li>
-                        <li><h5>Languages spoken:</h5> English<br></li>
-                        <li><h5>Capital city:</h5> Washington, D.C.</li>
-                        <li><h5>Safety rating:</h5> According to the Global Peace Index 2022, United States is number 128
-                            out of 163 countries<br> </li>
-                        <li><h5>Current time:</h5> There are 9 time zones by law in the USA and its dependencies. However, adding the time zones of 2 uninhabited US territories, Howland Island and Baker Island, brings the total count to 11 time zones.<br>
-                            The contiguous US has 4 standard time zones. In addition, Alaska, Hawaii, and 5 US dependencies all have their own time zones. As neither Hawaii nor the 5 dependencies use Daylight Saving Time (DST), there are only 6 corresponding DST time zones.:<br>
-                            <!--source https://www.timeanddate.com/time/zone/brazil-->
+            <!--Quick facts-->
+            <hr />
+            <div class="facts">
+              <h5>Quick facts</h5>
+              <ul>
+                <li>
+                  <h5>Population:</h5>
+                  336.2 million<br />
+                </li>
+                <li>
+                  <h5>Languages spoken:</h5>
+                  English<br />
+                </li>
+                <li>
+                  <h5>Capital city:</h5>
+                  Washington, D.C.
+                </li>
+                <li>
+                  <h5>Safety rating:</h5>
+                  According to the Global Peace Index 2022, United States is
+                  number 128 out of 163 countries<br />
+                </li>
+                <li>
+                  <h5>Current time:</h5>
+                  There are 9 time zones by law in the USA and its dependencies.
+                  However, adding the time zones of 2 uninhabited US
+                  territories, Howland Island and Baker Island, brings the total
+                  count to 11 time zones.<br />
+                  The contiguous US has 4 standard time zones. In addition,
+                  Alaska, Hawaii, and 5 US dependencies all have their own time
+                  zones. As neither Hawaii nor the 5 dependencies use Daylight
+                  Saving Time (DST), there are only 6 corresponding DST time
+                  zones.:<br />
+                  <!--source https://www.timeanddate.com/time/zone/brazil-->
 
-                            <!--Time widget 
+                  <!--Time widget 
                                 from https://logwork.com/clock-widget-text-->
-                            <div class="clock">
-                                <script src="https://cdn.logwork.com/widget/text.js"></script>
-                                <a href="https://logwork.com/current-time-in-washington-united-states-district-of-columbia" class="clock-widget-text" data-timezone="America/New_York" data-language="en" data-textcolor="#064a74" data-digitscolor="#064a74">Washington D.C., United States</a>
-                            </div>
-                           
-                            
-                        </li>
-                        <!--Currency-->
-                        <li><h5>Local currency:</h5> United States dollar $ <br>
-                            <div class="currency">
-                                <!-- Currency Converter Script - FxExchangeRate.com - https://www.fxexchangerate.com/exchange-rates-widget.html -->
-                                <div style="font-size:16px; font-family: sans-serif,Arial, Helvetica;width:198px; line-height:24px;border:1px solid #4A4A4A;background-color:#D6D6D6;margin:0px;">
-                                    <div style="background-color:#4A4A4A;height:2.2rem;color:#FFFFFF; font-weight:bold;text-align:left;padding:6px 0 0 6px; max-width:100%;">
-                                        <i style="background-size: contain;background-position: 50%;background-repeat: no-repeat; position: relative;display: inline-block;width: 1.33333333em;line-height: 1em; padding:0 8px 0 0px;font-size:18px;background-image:url(https://w.fxexchangerate.com/static/flags/gbp.webp);">&nbsp;</i>
-                                        <a rel="nofollow" style="color:#FFFFFF;padding-left:5px;text-decoration:none;" href="https://gbp.fxexchangerate.com">British Pound</a>
-                                    </div>
-                                    <script type="text/javascript" src="https://w.fxexchangerate.com/converter.php?fm=GBP&ft=USD,&lg=en&am=1&ty=2"></script>
-                                </div>
-                                <!--  End of Currency Converter Script -  FxExchangeRate.com -->
-                            </div>
-                        </li>
-                        
-                    </ul>
+                  <div class="clock">
+                    <script src="https://cdn.logwork.com/widget/text.js"></script>
+                    <a
+                      href="https://logwork.com/current-time-in-washington-united-states-district-of-columbia"
+                      class="clock-widget-text"
+                      data-timezone="America/New_York"
+                      data-language="en"
+                      data-textcolor="#064a74"
+                      data-digitscolor="#064a74"
+                      >Washington D.C., United States</a
+                    >
+                  </div>
+                </li>
+                <!--Currency-->
+                <li>
+                  <h5>Local currency:</h5>
+                  United States dollar $ <br />
+                  <div class="currency">
+                    <!-- Currency Converter Script - FxExchangeRate.com - https://www.fxexchangerate.com/exchange-rates-widget.html -->
+                    <div
+                      style="
+                        font-size: 16px;
+                        font-family: sans-serif, Arial, Helvetica;
+                        width: 198px;
+                        line-height: 24px;
+                        border: 1px solid #4a4a4a;
+                        background-color: #d6d6d6;
+                        margin: 0px;
+                      "
+                    >
+                      <div
+                        style="
+                          background-color: #4a4a4a;
+                          height: 2.2rem;
+                          color: #ffffff;
+                          font-weight: bold;
+                          text-align: left;
+                          padding: 6px 0 0 6px;
+                          max-width: 100%;
+                        "
+                      >
+                        <i
+                          style="
+                            background-size: contain;
+                            background-position: 50%;
+                            background-repeat: no-repeat;
+                            position: relative;
+                            display: inline-block;
+                            width: 1.33333333em;
+                            line-height: 1em;
+                            padding: 0 8px 0 0px;
+                            font-size: 18px;
+                            background-image: url(https://w.fxexchangerate.com/static/flags/gbp.webp);
+                          "
+                          >&nbsp;</i
+                        >
+                        <a
+                          rel="nofollow"
+                          style="
+                            color: #ffffff;
+                            padding-left: 5px;
+                            text-decoration: none;
+                          "
+                          href="https://gbp.fxexchangerate.com"
+                          >British Pound</a
+                        >
+                      </div>
+                      <script
+                        type="text/javascript"
+                        src="https://w.fxexchangerate.com/converter.php?fm=GBP&ft=USD,&lg=en&am=1&ty=2"
+                      ></script>
+                    </div>
+                    <!--  End of Currency Converter Script -  FxExchangeRate.com -->
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!--Weather widget-->
+            <div class="weather">
+              <hr />
+              <div class="heading"><h5>Current Weather</h5></div>
+              <a
+                class="weatherwidget-io"
+                href="https://forecast7.com/en/38d91n77d04/washington/"
+                data-label_1="WASHINGTON D.C., USA"
+                data-label_2="WEATHER"
+                data-days="3"
+                >WASHINGTON D.C. WEATHER</a
+              >
+              <script>
+                !(function (d, s, id) {
+                  var js,
+                    fjs = d.getElementsByTagName(s)[0];
+                  if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = "https://weatherwidget.io/js/widget.min.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                  }
+                })(document, "script", "weatherwidget-io-js");
+              </script>
+            </div>
+
+            <!--Travel advice link-->
+            <hr />
+            <div class="advice">
+              <div class="heading"><h5>Travel Advice</h5></div>
+              <p>
+                For more information and travel advice, please visit Foreign
+                travel advice at gov.uk here:
+              </p>
+              <a
+                class="btn btn-secondary"
+                href="https://www.gov.uk/foreign-travel-advice/usa"
+                target="_blank"
+                role="button"
+                >Travel advice</a
+              >
+            </div>
+
+            <!--Accommodation link-->
+            <hr />
+            <div class="advice">
+              <div class="heading"><h5>Accommodation</h5></div>
+              <p>
+                To view and book accommodation, please visit booking.com here:
+              </p>
+              <a
+                class="btn btn-secondary"
+                href="https://www.booking.com/index.en-gb.html"
+                target="_blank"
+                role="button"
+                >Accommodation</a
+              >
+            </div>
+          </aside>
+
+          <!--Main text-->
+
+          <main
+            class="col-md-7 col-lg-8"
+            style="margin-bottom: 0px; margin-top: 0px; padding-top: 10px"
+          >
+            <h1>United States</h1>
+            <div class="main-text">
+              <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
+                <p class="col">
+                  The United States of America is a country consisting of 50
+                  independent states in the northern part of America, sixteen
+                  territories and a district of Columbia (Washington D.C.). It
+                  is the world’s third most populous country after China and
+                  India and the world’s fourth largest country by land area
+                  after Russia, Canada, and China..<br /><br />
+                </p>
+                <img class="col" src="../images/usa.jpg" alt="USA Flag" />
+              </div>
+              <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
+                <img
+                  class="col"
+                  src="../images/statue.jpg"
+                  alt="statue of liberty"
+                />
+                <p class="col">
+                  There are 13 stripes on the American National flag,
+                  representing the original thirteen colonies? And there were
+                  thirteen stars arranged in a circle. However, today, there are
+                  50 stars for 50 states. The flag has had 27 versions since its
+                  debut.
+                </p>
+              </div>
+
+              <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
+                <p class="col">
+                  Mount Rushmore Monument in the United States shows the heads
+                  of the four former presidents of the United States (George
+                  Washington, Thomas Jefferson, Theodore Roosevelt and Abraham
+                  Lincoln.) <br /><br />
+                </p>
+                <img
+                  class="col"
+                  src="../images/Mount-Rushmore-Monument.jpg"
+                  alt="Mount-Rushmore-Monument"
+                />
+              </div>
+
+              <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
+                <img
+                  class="col"
+                  src="../images/Black-Bear-Featured.jpg"
+                  alt="Black bear"
+                />
+                <p class="col">
+                  The landscape varies across this large country – from the
+                  tropical beaches of Florida to the snowy peaks of the Rocky
+                  Mountains, from the rolling prairie lands and barren deserts
+                  in the west to the huge areas of dense wilderness in the
+                  north. Interspersed throughout are the Great Lakes, the Grand
+                  Canyon, the majestic Yosemite Valley and the mighty
+                  Mississippi River. The wildlife is as diverse as the
+                  landscape. Mammals such as American Buffalo once roamed freely
+                  across the plains, but today can only be found in protected
+                  areas. The largest carnivores are black bears, grizzlies and
+                  even polar bears, which live in the northernmost state of
+                  Alaska.
+                </p>
+              </div>
+
+              <div class="source">
+                Source:
+                <a
+                  href="https://www.britannica.com/place/United-States"
+                  target="_blank"
+                >
+                  Britannica.com</a
+                >
+              </div>
+            </div>
+            <br />
+
+            <!--Things To Do-->
+            <h3>Things to do</h3>
+            <div class="text">
+              <div class="to-do">
+                <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
+                  <div class="col to-do-text">
+                    <h5>Visit New York</h5>
+                    <p>
+                      Central Park is one of the most visited tourist
+                      attractions in the world. Therefore a visit to New York
+                      City would not be complete without at least a quick stroll
+                      through part of the park.
+                    </p>
+                  </div>
+                  <img
+                    class="col"
+                    src="../images/central_park.jpg"
+                    alt="central park"
+                  />
+                </div>
+                <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
+                  <div class="col to-do-text">
+                    <h5>US National Parks</h5>
+                    <p>
+                      The US National Park system protects 60 different areas of
+                      the country, each with its own distinct beauty, geological
+                      formations, and ecosystems. These parks attract some 200
+                      million visitors annually. A national park since 1890,
+                      Yosemite is one of the country’s most popular national
+                      parks, thanks in large part to its shopping list of
+                      natural wonders—Half Dome, Yosemite Falls, the Merced
+                      River, and El Capitan, among them. It’s one of the most
+                      popular day trips from San Francisco.
+                    </p>
+                  </div>
+                  <img
+                    class="col"
+                    src="../images/yosemite.jpg"
+                    alt="Yosemite"
+                  />
+                </div>
+                <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
+                  <div class="col to-do-text">
+                    <h5>Grand Canyon National Park</h5>
+                    <p>
+                      Both of these cities are UNESCO World Protecting a canyon
+                      277 miles (446 kilometers) long, 10 miles (16 kilometers)
+                      wide, and a mile (1.6 kilometers) deep, this park is an
+                      astounding sight that must be seen to be believed. Most
+                      visitors explore either the North or South Rim, though
+                      serious hikers can tackle a strenuous rim-to-rim trek.
+                    </p>
+                  </div>
+                  <img
+                    class="col"
+                    src="../images/grandcanyon.jpg"
+                    alt="Grand canyon"
+                  />
+                </div>
+                <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
+                  <div class="col to-do-text">
+                    <h5>Caladesi Island State Park</h5>
+                    <p>
+                      Located off Florida’s Gulf Coast, west of the town of
+                      Dunedin and near the city of Clearwater, Caladesi Island
+                      State Park is famed for its unspoiled beach.On pristine
+                      Caladesi Island State Park, quiet paths lead along the
+                      dunes, palms stand against the warm coastal breezes, and
+                      shore birds and sea turtles live without interference from
+                      people.
+                    </p>
+                  </div>
+                  <img
+                    class="col"
+                    src="../images/caladesi.jpg"
+                    alt="Caladesi beach"
+                  />
                 </div>
 
-                <!--Weather widget-->
-                <div class="weather">
-                    <hr>
-                    <div class="heading"><h5>Current Weather</h5></div>
-                    <a class="weatherwidget-io" href="https://forecast7.com/en/38d91n77d04/washington/" data-label_1="WASHINGTON D.C., USA" data-label_2="WEATHER" data-days="3" >WASHINGTON D.C. WEATHER</a>
-                    <script>
-                        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-                    </script>
-                </div>    
-
-                <!--Travel advice link-->
-                <hr>
-                <div class="advice">
-                    <div class="heading"><h5>Travel Advice</h5></div>
-                    <p>For more information and travel advice, please visit Foreign travel advice at gov.uk here:</p>
-                    <a class="btn btn-secondary" href="https://www.gov.uk/foreign-travel-advice/usa"  target="_blank" role="button">Travel advice</a>
+                <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
+                  <div class="col to-do-text">
+                    <h5>Visit the Empire State Building</h5>
+                    <p>
+                      The Empire State Building is the World's Most Famous
+                      Building. It rises 1,454 ft from ground to antenna &
+                      features the only 360 degree open-air vantage point of
+                      Midtown.On a clear day you can see up to 6 states.
+                    </p>
+                  </div>
+                  <img
+                    class="col"
+                    src="../images/empirestate.jpg"
+                    alt="Empire State"
+                  />
                 </div>
+              </div>
+            </div>
 
-                <!--Accommodation link-->
-                <hr>
-                <div class="advice">
-                    <div class="heading"><h5>Accommodation</h5></div>
-                    <p>To view and book accommodation, please visit booking.com here: </p>
-                    <a class="btn btn-secondary" href="https://www.booking.com/index.en-gb.html"  target="_blank" role="button">Accommodation</a>
+            <!--Photo gallery-->
+
+            <h3>Photo Gallery</h3>
+            <div
+              id="carouselExampleIndicators"
+              class="carousel slide"
+              data-bs-ride="true"
+              style="max-width: 500px"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="3"
+                  aria-label="Slide 4"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="4"
+                  aria-label="Slide 5"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="5"
+                  aria-label="Slide 6"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="../images/vegas.jpg"
+                    class="d-block w-100"
+                    alt="Las Vegas"
+                  />
+                  <div
+                    id="usa-1-info"
+                    class="carousel-caption d-none d-md-block"
+                  >
+                    <h5>Las Vegas</h5>
+                  </div>
                 </div>
-                               
-                         
-            </aside>
-
-            <!--Main text-->
-
-            <main class="col-md-7 col-lg-8" style="margin-bottom: 0px; margin-top: 0px; padding-top: 10px;">
-                <h1>United States</h1>
-                <div class="main-text">
-                    <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
-                        <p class="col">The United States of America is a country consisting of 50 independent states in the northern part of America, sixteen territories and a district of Columbia (Washington D.C.). It is the world’s third most populous country after China and India and the world’s fourth largest country by land area after Russia, Canada, and China..<br><br>
-                        </p>
-                        <img class="col" src="../images/usa.jpg" alt="USA Flag">
-                    </div>
-                    <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
-                        <img class="col" src="../images/statue.jpg" alt="statue of liberty">
-                        <p class="col">There are 13 stripes on the American National flag, representing the original thirteen colonies? And there were thirteen stars arranged in a circle. However, today, there are 50 stars for 50 states. The flag has had 27 versions since its debut.   
-                        </p>
-
-                    </div>
-
-                    <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
-                        <p class="col">Mount Rushmore Monument in the United States shows the heads of the four former presidents of the United States (George Washington, Thomas Jefferson, Theodore Roosevelt and Abraham Lincoln.)
-                            <br><br>
-                        </p>
-                        <img class="col" src="../images/Mount-Rushmore-Monument.jpg" alt="Mount-Rushmore-Monument">
-                    </div>
-
-                    
-                    <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
-                        <img class="col" src="../images/Black-Bear-Featured.jpg" alt="Black bear">
-                        <p class="col">
-                            The landscape varies across this large country – from the tropical beaches of Florida to the snowy peaks of the Rocky Mountains, from the rolling prairie lands and barren deserts in the west to the huge areas of dense wilderness in the north. Interspersed throughout are the Great Lakes, the Grand Canyon, the majestic Yosemite Valley and the mighty Mississippi River.
-
-The wildlife is as diverse as the landscape. Mammals such as American Buffalo once roamed freely across the plains, but today can only be found in protected areas. The largest carnivores are black bears, grizzlies and even polar bears, which live in the northernmost state of Alaska.
-                        </p>
-
-                    </div>    
-                                                   
-
-                
-                    <div class="source">
-                        Source: <a href="https://www.britannica.com/place/United-States" target="_blank"> Britannica.com</a>
-                    </div>
+                <div class="carousel-item">
+                  <img
+                    src="../images/san.jpg"
+                    class="d-block w-100"
+                    alt="San Franciso"
+                  />
+                  <div
+                    id="usa-2-info"
+                    class="carousel-caption d-none d-md-block"
+                  >
+                    <h5>San Francisco</h5>
+                  </div>
                 </div>
-                <br>
-
-                <!--Things To Do-->
-                <h3>Things to do</h3>
-                <div class="text">
-                    <div class="to-do">
-                        <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
-                            <div class="col to-do-text">
-                                <h5>Visit New York</h5>
-                                <p>Central Park is one of the most visited tourist attractions in the world. Therefore a visit to New York City would not be complete without at least a quick stroll through part of the park.                               
-                                </p>
-                            </div>
-                            <img class="col" src="../images/central_park.jpg" alt="central park">
-                            
-                        </div>
-                        <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
-                            <div class="col to-do-text">
-                                <h5>US National Parks</h5>
-                                <p>The US National Park system protects 60 different areas of the country, each with its own distinct beauty, geological formations, and ecosystems. These parks attract some 200 million visitors annually.
-                                    A national park since 1890, Yosemite is one of the country’s most popular national parks, thanks in large part to its shopping list of natural wonders—Half Dome, Yosemite Falls, the Merced River, and El Capitan, among them. It’s one of the most popular day trips from San Francisco.
-                                </p>
-                            </div>
-                            <img class="col" src="../images/yosemite.jpg" alt="Yosemite">
-                        </div>
-                        <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
-                            <div class="col to-do-text">
-                                <h5>Grand Canyon National Park</h5> 
-                                <p>Both of these cities are UNESCO World 
-                                    Protecting a canyon 277 miles (446 kilometers) long, 10 miles (16 kilometers) wide, and a mile (1.6 kilometers) deep, this park is an astounding sight that must be seen to be believed. Most visitors explore either the North or South Rim, though serious hikers can tackle a strenuous rim-to-rim trek.
-                                </p>
-                            </div>
-                            <img class="col" src="../images/grandcanyon.jpg" alt="Grand canyon">
-                        </div>    
-                        <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
-                            <div class="col to-do-text">
-                                <h5>Caladesi Island State Park</h5>
-                                <p>Located off Florida’s Gulf Coast, west of the town of Dunedin and near the city of Clearwater, Caladesi Island State Park is famed for its unspoiled beach.On pristine Caladesi Island State Park, quiet paths lead along the dunes, palms stand against the warm coastal breezes, and shore birds and sea turtles live without interference from people.
-                                    
-                                </p>
-                            </div>
-                            <img class="col" src="../images/caladesi.jpg" alt="Caladesi beach">
-                        </div>
-
-                        <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
-                            <div class="col to-do-text">
-                                <h5>Visit the Empire State Building</h5> 
-                                <p>The Empire State Building is the World's Most Famous Building. It rises 1,454 ft from ground to antenna & features the only 360 degree open-air vantage point of Midtown.On a clear day you can see up to 6 states. 
-                                </p>
-                            </div>
-                            <img class="col" src="../images/empirestate.jpg" alt="Empire State">
-                        </div>                    
-                    </div>
-                                               
-                
+                <div class="carousel-item">
+                  <img
+                    src="../images/Chicago.jpg"
+                    class="d-block w-100"
+                    alt="Chicago"
+                  />
+                  <div
+                    id="usa-3-info"
+                    class="carousel-caption d-none d-md-block"
+                  >
+                    <h5>Chicago</h5>
+                  </div>
                 </div>
-
-                <!--Photo gallery-->
-                
-                <h3>Photo Gallery</h3>
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" style="max-width: 500px">
-                    <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="../images/vegas.jpg" class="d-block w-100" alt="Las Vegas">
-                            <div id="usa-1-info" class="carousel-caption d-none d-md-block">
-                                <h5>Las Vegas</h5>
-                            </div>
-                        </div>
-                              <div class="carousel-item">
-                                <img src="../images/san.jpg" class="d-block w-100" alt="San Franciso">
-                                <div id="usa-2-info" class="carousel-caption d-none d-md-block">
-                                    <h5>San Francisco</h5>
-                                  </div>
-                              </div>
-                              <div class="carousel-item">
-                                <img src="../images/Chicago.jpg" class="d-block w-100" alt="Chicago">
-                                <div id="usa-3-info" class="carousel-caption d-none d-md-block">
-                                    <h5>Chicago</h5>  
-                                  </div>
-                              </div>
-                              <div class="carousel-item">
-                                <img src="../images/911.jpg" class="d-block w-100" alt="9/11 Memorial">
-                                <div id="usa-4-info" class="carousel-caption d-none d-md-block">
-                                    <h5>9/11 Memorial</h5>  
-                                  </div>
-                              </div>
-                              <div class="carousel-item">
-                                <img src="../images/manhattan.jpg" class="d-block w-100" alt="Manhattan">
-                                <div id="usa-5-info" class="carousel-caption d-none d-md-block">
-                                    <h5>Manhattan</h5>  
-                                  </div>
-                              </div>
-                              <div class="carousel-item">
-                                <img src="../images/washington.jpg" class="d-block w-100" alt="Washington">
-                                <div id="usa-6-info" class="carousel-caption d-none d-md-block">
-                                    <h5>Washington</h5>  
-                                  </div>
-                              </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                              <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                              <span class="visually-hidden">Next</span>
-                            </button>
-                          </div>
-                          <br>
-
-                
-             
-               
-            </main>
-     
-          </div>
+                <div class="carousel-item">
+                  <img
+                    src="../images/911.jpg"
+                    class="d-block w-100"
+                    alt="9/11 Memorial"
+                  />
+                  <div
+                    id="usa-4-info"
+                    class="carousel-caption d-none d-md-block"
+                  >
+                    <h5>9/11 Memorial</h5>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="../images/manhattan.jpg"
+                    class="d-block w-100"
+                    alt="Manhattan"
+                  />
+                  <div
+                    id="usa-5-info"
+                    class="carousel-caption d-none d-md-block"
+                  >
+                    <h5>Manhattan</h5>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="../images/washington.jpg"
+                    class="d-block w-100"
+                    alt="Washington"
+                  />
+                  <div
+                    id="usa-6-info"
+                    class="carousel-caption d-none d-md-block"
+                  >
+                    <h5>Washington</h5>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <br />
+          </main>
         </div>
-    
-    <footer>
-        Copyright &#169; 2023 <br>
+      </div>
+
+      <footer>
+        Copyright &#169; 2023 <br />
         Team 4
-    </footer>
-
+      </footer>
+    </div>
     <!--Bootstrap js-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

@@ -1,375 +1,643 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!--Bootstrap css-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    
-    <!--Local css-->
-    <link href="../styles/main.css" rel="stylesheet">
-        
-    <!--map--> 
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type='text/javascript'>
-        // based on https://groups.google.com/g/google-visualization-api/c/lIVZFUz8uB4?pli=1
-        google.charts.load('current', {'packages':['geochart'], });
-        google.charts.setOnLoadCallback(drawRegionsMap);
-        
-        function drawRegionsMap() {
-            var data = google.visualization.arrayToDataTable([
-                  ['Country'],
-                  ['Tanzania'],
-                  
-                ]);
-        
-        
-        var options = {
-            defaultColor: '#064A74', // grey:'#6c757d',
-            backgroundColor: 'antiquewhite',
-            datalessRegionColor: '#DCDCDC',
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        //region: 'world', resolution: 'continents',
+    <!--Bootstrap css-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <!--Local css-->
+    <link href="../styles/main.css" rel="stylesheet" />
+
+    <!--map-->
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript">
+      // based on https://groups.google.com/g/google-visualization-api/c/lIVZFUz8uB4?pli=1
+      google.charts.load("current", { packages: ["geochart"] });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ["Country"],
+          ["Tanzania"],
+        ]);
+
+        var options = {
+          defaultColor: "#064A74", // grey:'#6c757d',
+          backgroundColor: "antiquewhite",
+          datalessRegionColor: "#DCDCDC",
+
+          //region: 'world', resolution: 'continents',
         };
-        
-        var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
-                        
+
+        var chart = new google.visualization.GeoChart(
+          document.getElementById("chart_div")
+        );
+
         chart.draw(data, options);
-        
-        
-        };
-        </script>
+      }
+    </script>
 
     <title>Tanzania</title>
-</head>
-<body>
-
-    <!--Header-->
-    <div class="top-header">
+  </head>
+  <body>
+    <div class="wrapper">
+      <!--Header-->
+      <div class="top-header">
         <h2>TRAVEL PROJECT</h2>
-    </div>
-    
-    <!--Navbar-->
-    <nav>
+      </div>
+
+      <!--Navbar-->
+      <nav>
         <ul class="main-nav">
-            
-            <!--Rest-->
-            <li class="push-right">
-                <div id="navbar-right">
-                    <ul>
-                        <li><a href="../index.html">HOME</a></li>
-                        <li><a href="places.html">PLACES</a></li>
-                        <li><a href="blogs.html">BLOGS</a></li>
-                        <li><a href="contact.html">CONTACT</a></li>
-                    </ul>
-                </div>
-            </li>
-        
-            <!---Dropdown-->
-            <li>
-                <div class="dropdown">
-                    <button class="btn drop btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    EXPLORE
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="../index.html">Home</a></li>
-                        <li><a class="dropdown-item" href="australia.html">Australia</a></li>
-                        <li><a class="dropdown-item" href="brazil.html">Brazil</a></li>
-                        <li><a class="dropdown-item" href="canada.html">Canada</a></li>
-                        <li><a class="dropdown-item" href="france.html">France</a></li>
-                        <li><a class="dropdown-item" href="germany.html">Germany</a></li>
-                        <li><a class="dropdown-item" href="india.html">India</a></li>
-                        <li><a class="dropdown-item" href="japan.html">Japan</a></li>
-                        <li><a class="dropdown-item" href="tanzania.html">Tanzania</a></li>
-                        <li><a class="dropdown-item" href="turkey.html">Turkey</a></li>
-                        <!--<li><a class="dropdown-item" href="uk.html">United Kingdom</a></li>-->
-                        <li><a class="dropdown-item" href="usa.html">United States</a></li>
-                    
-                    </ul>
-                </div>
-            </li>
+          <!--Rest-->
+          <li class="push-right">
+            <div id="navbar-right">
+              <ul>
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="places.html">PLACES</a></li>
+                <li><a href="blogs.html">BLOGS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <!---Dropdown-->
+          <li>
+            <div class="dropdown">
+              <button
+                class="btn drop btn-secondary dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                EXPLORE
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="../index.html">Home</a></li>
+                <li>
+                  <a class="dropdown-item" href="australia.html">Australia</a>
+                </li>
+                <li><a class="dropdown-item" href="brazil.html">Brazil</a></li>
+                <li><a class="dropdown-item" href="canada.html">Canada</a></li>
+                <li><a class="dropdown-item" href="france.html">France</a></li>
+                <li>
+                  <a class="dropdown-item" href="germany.html">Germany</a>
+                </li>
+                <li><a class="dropdown-item" href="india.html">India</a></li>
+                <li><a class="dropdown-item" href="japan.html">Japan</a></li>
+                <li>
+                  <a class="dropdown-item" href="tanzania.html">Tanzania</a>
+                </li>
+                <li><a class="dropdown-item" href="turkey.html">Turkey</a></li>
+                <!--<li><a class="dropdown-item" href="uk.html">United Kingdom</a></li>-->
+                <li>
+                  <a class="dropdown-item" href="usa.html">United States</a>
+                </li>
+              </ul>
+            </div>
+          </li>
         </ul>
+      </nav>
 
-    </nav>
-
-        
-    <div class="container-fluid">
+      <div class="container-fluid">
         <div class="row countries">
-            <!--Side bar-->
-            <aside class="col-md-5 col-lg-2" style="height: 551px; margin-top: 10px; display:inline-table">
-                
-                <!--Map-->
-                <div class="heading"><h5>Tanzania</h5></div>
-                <div id="chart_div" style="width: 222px;"></div>
+          <!--Side bar-->
+          <aside
+            class="col-md-5 col-lg-2"
+            style="height: 551px; margin-top: 10px; display: inline-table"
+          >
+            <!--Map-->
+            <div class="heading"><h5>Tanzania</h5></div>
+            <div id="chart_div" style="width: 222px"></div>
 
-                <!--Quick facts-->
-                <hr>
-                <div class="facts">
-                    <h5>Quick facts</h5>
-                    <ul>
-                        <li><h5>Population:</h5>57.31 million<br></li>
-                        <li><h5>Languages spoken:</h5> Swahili<br></li>
-                        <li><h5>Capital city:</h5> Dodoma</li>
-                        <li><h5>Safety rating:</h5> According to the Global Peaceful Index, 
-                            Tanzania is the number 54 out of 163 countries<br> </li>
-                        <li><h5>Current time:</h5> Tanzania observes Eastern Africa Time all year. <br>
-                            There are no Daylight Saving Time clock changes.<br>
-                            <i>East Africa Time (EAT),</i> UTC+3<br>
-                            <!--source https://www.timeanddate.com/time/zone/tanzania-->
+            <!--Quick facts-->
+            <hr />
+            <div class="facts">
+              <h5>Quick facts</h5>
+              <ul>
+                <li>
+                  <h5>Population:</h5>
+                  57.31 million<br />
+                </li>
+                <li>
+                  <h5>Languages spoken:</h5>
+                  Swahili<br />
+                </li>
+                <li>
+                  <h5>Capital city:</h5>
+                  Dodoma
+                </li>
+                <li>
+                  <h5>Safety rating:</h5>
+                  According to the Global Peaceful Index, Tanzania is the number
+                  54 out of 163 countries<br />
+                </li>
+                <li>
+                  <h5>Current time:</h5>
+                  Tanzania observes Eastern Africa Time all year. <br />
+                  There are no Daylight Saving Time clock changes.<br />
+                  <i>East Africa Time (EAT),</i> UTC+3<br />
+                  <!--source https://www.timeanddate.com/time/zone/tanzania-->
 
-                            <!--Time widget 
+                  <!--Time widget 
                                 from https://logwork.com/clock-widget-text-->
-                            <div class="clock">
-                                <script src="https://cdn.logwork.com/widget/text.js"></script>
-                                <a href="https://logwork.com/current-time-in-dodoma-tanzania" class="clock-widget-text" data-timezone="Africa/Dar_es_Salaam" data-language="en">Dodoma, Tanzania, Dodoma</a>
-                            </div>
-                           
-                            
-                        </li>
-                        <!--Currency-->
-                        <li><h5>Local currency:</h5> Tanzanian Shilling (TZS)<br>
-                            <div class="currency">
-                                <!-- Currency Converter Script - FxExchangeRate.com  -->
-                                <div style="font-size:16px; font-family: sans-serif,Arial, Helvetica;width:198px; line-height:24px;border:1px solid #4A4A4A;background-color:#D6D6D6;margin:0px;">
-                                <div style="background-color:#4A4A4A;height:2.2rem;color:#FFFFFF; font-weight:bold;text-align:left;padding:6px 0 0 6px; max-width:100%;">
-                                <i style="background-size: contain;background-position: 50%;background-repeat: no-repeat; position: relative;display: inline-block;width: 1.33333333em;line-height: 1em; padding:0 8px 0 0px;font-size:18px;background-image:url(https://w.fxexchangerate.com/static/flags/gbp.webp);">&nbsp;</i>
-                                <a rel="nofollow" style="color:#FFFFFF;padding-left:5px;text-decoration:none;" href="https://gbp.fxexchangerate.com">British Pound</a>
-                                </div>
-                                <script type="text/javascript" src="https://w.fxexchangerate.com/converter.php?fm=GBP&ft=TZS,&lg=en&am=1&ty=2">
+                  <div class="clock">
+                    <script src="https://cdn.logwork.com/widget/text.js"></script>
+                    <a
+                      href="https://logwork.com/current-time-in-dodoma-tanzania"
+                      class="clock-widget-text"
+                      data-timezone="Africa/Dar_es_Salaam"
+                      data-language="en"
+                      >Dodoma, Tanzania, Dodoma</a
+                    >
+                  </div>
+                </li>
+                <!--Currency-->
+                <li>
+                  <h5>Local currency:</h5>
+                  Tanzanian Shilling (TZS)<br />
+                  <div class="currency">
+                    <!-- Currency Converter Script - FxExchangeRate.com  -->
+                    <div
+                      style="
+                        font-size: 16px;
+                        font-family: sans-serif, Arial, Helvetica;
+                        width: 198px;
+                        line-height: 24px;
+                        border: 1px solid #4a4a4a;
+                        background-color: #d6d6d6;
+                        margin: 0px;
+                      "
+                    >
+                      <div
+                        style="
+                          background-color: #4a4a4a;
+                          height: 2.2rem;
+                          color: #ffffff;
+                          font-weight: bold;
+                          text-align: left;
+                          padding: 6px 0 0 6px;
+                          max-width: 100%;
+                        "
+                      >
+                        <i
+                          style="
+                            background-size: contain;
+                            background-position: 50%;
+                            background-repeat: no-repeat;
+                            position: relative;
+                            display: inline-block;
+                            width: 1.33333333em;
+                            line-height: 1em;
+                            padding: 0 8px 0 0px;
+                            font-size: 18px;
+                            background-image: url(https://w.fxexchangerate.com/static/flags/gbp.webp);
+                          "
+                          >&nbsp;</i
+                        >
+                        <a
+                          rel="nofollow"
+                          style="
+                            color: #ffffff;
+                            padding-left: 5px;
+                            text-decoration: none;
+                          "
+                          href="https://gbp.fxexchangerate.com"
+                          >British Pound</a
+                        >
+                      </div>
+                      <script
+                        type="text/javascript"
+                        src="https://w.fxexchangerate.com/converter.php?fm=GBP&ft=TZS,&lg=en&am=1&ty=2"
+                      ></script>
+                    </div>
+                    <!--  End of Currency Converter Script -  FxExchangeRate.com -->
+                  </div>
+                </li>
+              </ul>
+            </div>
 
-                                </script></div><!--  End of Currency Converter Script -  FxExchangeRate.com -->
-                            </div>
-                        </li>
-                        
-                    </ul>
+            <!--Weather widget-->
+            <div class="weather">
+              <hr />
+              <a
+                button
+                type="button"
+                class="btn btn-secondary"
+                href="https://forecast7.com/en/n6d3734d89/tanzania/"
+                target="_blank"
+                >Current Weather</a
+              >
+              <a
+                class="weatherwidget-io"
+                href="https://forecast7.com/en/n6d3734d89/tanzania/"
+                data-label_1="TANZANIA"
+                data-label_2="WEATHER"
+                data-days="3"
+                >TANZANIA WEATHER</a
+              >
+              <script>
+                !(function (d, s, id) {
+                  var js,
+                    fjs = d.getElementsByTagName(s)[0];
+                  if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = "https://weatherwidget.io/js/widget.min.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                  }
+                })(document, "script", "weatherwidget-io-js");
+              </script>
+            </div>
+
+            <!--Travel advice link-->
+            <hr />
+            <div class="advice">
+              <div class="heading"><h5>Travel Advice</h5></div>
+              <p>
+                For more information and travel advice, please visit Foreign
+                travel advice at gov.uk here:
+              </p>
+              <a
+                class="btn btn-secondary"
+                href="https://www.gov.uk/foreign-travel-advice/tanzania/entry-requirements"
+                target="_blank"
+                role="button"
+                >Travel advice</a
+              >
+            </div>
+
+            <!--Accommodation link-->
+            <hr />
+            <div class="advice">
+              <div class="heading"><h5>Accommodation</h5></div>
+              <p>
+                To view and book accommodation, please visit booking.com here:
+              </p>
+              <a
+                class="btn btn-secondary"
+                href="https://www.booking.com/index.en-gb.html"
+                target="_blank"
+                role="button"
+                >Accommodation</a
+              >
+            </div>
+          </aside>
+
+          <!--Main text-->
+
+          <main
+            class="col-md-7 col-lg-8"
+            style="margin-bottom: 0px; margin-top: 0px; padding-top: 10px"
+          >
+            <h1>Tanzania</h1>
+            <div class="main-text">
+              <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
+                <p class="col">
+                  Tanzania is a country located in East Africa, bordered by
+                  Kenya and Uganda to the north, Rwanda, Burundi, and the
+                  Democratic Republic of Congo to the west, and Zambia, Malawi,
+                  and Mozambique to the south. The Indian Ocean lies to the east
+                  of Tanzania.<br /><br />
+                </p>
+                <img
+                  class="col"
+                  src="../images/Flag-Tanzania.webp"
+                  alt="Tanzania Flag"
+                />
+              </div>
+              <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
+                <img
+                  class="col"
+                  src="../images/TanzaniaPic11.jpeg"
+                  alt="Maasai Tribe"
+                />
+                <p class="col">
+                  Tanzania has a diverse population of over 57 million people,
+                  with more than 120 distinct ethnic groups. The majority of the
+                  population is Christian or Muslim, and traditional African
+                  religions are also practiced.
+                </p>
+              </div>
+
+              <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
+                <p class="col">
+                  Tanzania is home to several famous tourist attractions,
+                  including Mount Kilimanjaro, Serengeti National Park, and the
+                  Ngorongoro Conservation Area. These natural wonders attract
+                  thousands of visitors each year and contribute significantly
+                  to the country's economy.<br /><br />
+                </p>
+                <img
+                  class="col"
+                  src="../images/Tanzania6Pic.jpeg"
+                  alt="Serengeti National Park"
+                />
+              </div>
+
+              <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
+                <img
+                  class="col"
+                  src="../images/TanzaniaPic10.jpeg"
+                  alt="Ngorongoro Conservation Area"
+                />
+                <p class="col">
+                  The economy of Tanzania is largely dependent on agriculture,
+                  with main crops including coffee, cotton, cashew nuts, and
+                  tobacco. The country also has significant natural resources,
+                  such as minerals, wildlife, and forests.
+                </p>
+              </div>
+
+              <div class="source">
+                Source:
+                <a
+                  href="https://www.britannica.com/place/Tanzania"
+                  target="_blank"
+                >
+                  Britannica.com</a
+                >
+              </div>
+            </div>
+            <br />
+
+            <!--Things To Do-->
+            <h3>Things to do</h3>
+            <div class="text">
+              <div class="to-do">
+                <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
+                  <div class="col to-do-text">
+                    <h5>Serengeti national park</h5>
+                    <p>
+                      The Serengeti National Park is one of the largest parks in
+                      Tanzania; it has about 14,763 km2 of surface. When you are
+                      there, it feels like you were in the lion king film. The
+                      name of the park, Serengeti, means “endless plain” and is
+                      derived from the Masai language. *The Massai are a tribe
+                      of about 880,000 people, who live in southern Kenya and
+                      northern Tanzania.
+                    </p>
+                  </div>
+                  <img
+                    class="col"
+                    src="../images/TanzaniaPic1.jpeg"
+                    alt="Serengeti National Park"
+                  />
+                </div>
+                <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
+                  <div class="col to-do-text">
+                    <h5>Ngorongoro national park</h5>
+                    <p>
+                      The Ngorongoro conservation zone is located in northern
+                      Tanzania. This area is situated inside the extensive
+                      volcanic crater of Ngorongoro. It serves as a habitat for
+                      the five great animals of the big game: elephants, lions,
+                      leopards, buffaloes, and rhinos. If you go, stand in from
+                      of the park before going down to the crater and you will
+                      be able to observe one of the best landscapes of Africa.
+                    </p>
+                  </div>
+                  <img
+                    class="col"
+                    src="../images/TanzaniaPic2.jpeg"
+                    alt="tone Town Market"
+                  />
+                </div>
+                <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
+                  <div class="col to-do-text">
+                    <h5>Trekking in Kilimanjaroa</h5>
+                    <p>
+                      The well-know mountain all over the world. It is the
+                      highest peak of Africa with an altitude of 5.895 m. If you
+                      are trained, don't miss it!
+                    </p>
+                  </div>
+
+                  <img
+                    class="col"
+                    src="../images/TanzaniaPic12.jpeg"
+                    alt="Kilimanjaroa Trekking"
+                  />
+                </div>
+                <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
+                  <div class="col to-do-text">
+                    <h5>Relax in Zanzibar and Stone town</h5>
+                    <p>
+                      Zanzibar is the heavenly island of Tanzania. Nothing to
+                      say that you cannot see in the pictures…go there and
+                      relax! Also, you should spend 1 or 2 days in Stone Town
+                      and enjoy its ambiance and night markets!
+                    </p>
+                  </div>
+                  <img class="col" src="../images/TanzaniaPic3.jpeg"" alt="Stone
+                  Town Market">
                 </div>
 
-                <!--Weather widget-->
-                <div class="weather">
-                    <hr>
-                    <a button type="button" class="btn btn-secondary" href="https://forecast7.com/en/n6d3734d89/tanzania/" target="_blank">Current Weather</a>
-                    <a class="weatherwidget-io" href="https://forecast7.com/en/n6d3734d89/tanzania/" data-label_1="TANZANIA" data-label_2="WEATHER" data-days="3" >TANZANIA WEATHER</a>
-                    <script>
-                        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-                    </script>
-                </div>             
-
-                <!--Travel advice link-->
-                <hr>
-                <div class="advice">
-                    <div class="heading"><h5>Travel Advice</h5></div>
-                    <p>For more information and travel advice, please visit Foreign travel advice at gov.uk here:</p>
-                    <a class="btn btn-secondary" href="https://www.gov.uk/foreign-travel-advice/tanzania/entry-requirements"  target="_blank" role="button">Travel advice</a>
+                <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
+                  <div class="col to-do-text">
+                    <h5>Go on a food tour</h5>
+                    <p>
+                      Tanzania have its typical national dish: Ugali and
+                      chapatti. Ugali is a mix of cornmeal and water they
+                      normally accompany it with some veggies or meat. There is
+                      another dish typical from Tanzania: Chips Mayai. The
+                      appearance is like a Spanish omelet but instead of potato
+                      omelet, they do French fries omelet. The appearance might
+                      not be amazing but the taste is! The best food Tanzania
+                      has are its tropical fruits, there are plenty such as
+                      mango, papaya, and bananas!
+                    </p>
+                  </div>
+                  <img
+                    class="col"
+                    src="../images/TanzaniaPic5.jpeg"
+                    alt="Chips Mayai"
+                  />
                 </div>
+              </div>
+            </div>
 
-                <!--Accommodation link-->
-                <hr>
-                <div class="advice">
-                    <div class="heading"><h5>Accommodation</h5></div>
-                    <p>To view and book accommodation, please visit booking.com here: </p>
-                    <a class="btn btn-secondary" href="https://www.booking.com/index.en-gb.html"  target="_blank" role="button">Accommodation</a>
+            <!--Photo gallery-->
+
+            <h3>Photo Gallery</h3>
+            <div
+              id="carouselExampleIndicators"
+              class="carousel slide"
+              data-bs-ride="true"
+              style="max-width: 500px"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="3"
+                  aria-label="Slide 4"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="4"
+                  aria-label="Slide 5"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="5"
+                  aria-label="Slide 6"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="../images/TanzaniaPic7.jpeg"
+                    class="d-block w-100"
+                    alt="Rio de Janeiro"
+                  />
+                  <div
+                    id="tanzania-1-info"
+                    class="carousel-caption d-none d-md-block"
+                  >
+                    <h5>Hot-air ballooning in Serengeti National Park</h5>
+                  </div>
                 </div>
-                               
-                         
-            </aside>
-
-            <!--Main text-->
-
-            <main class="col-md-7 col-lg-8" style="margin-bottom: 0px; margin-top: 0px; padding-top: 10px;">
-                <h1>Tanzania</h1>
-                <div class="main-text">
-                    <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
-                        <p class="col">Tanzania is a country located in East Africa, bordered by Kenya and Uganda 
-                            to the north, Rwanda, Burundi, and the Democratic Republic of Congo to the west, and Zambia, 
-                            Malawi, and Mozambique to the south. The Indian Ocean lies to the east of Tanzania.<br><br>
-                        </p>
-                        <img class="col" src="../images/Flag-Tanzania.webp" alt="Tanzania Flag">
-                    </div>
-                    <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
-                        <img class="col" src="../images/TanzaniaPic11.jpeg" alt="Maasai Tribe">
-                        <p class="col">
-                            Tanzania has a diverse population of over 57 million people, with more than 120 distinct ethnic groups. 
-                            The majority of the population is Christian or Muslim, and traditional African religions are also practiced.
-                        </p>
-
-                    </div>
-
-                    <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
-                        <p class="col">
-                            Tanzania is home to several famous tourist attractions, including Mount Kilimanjaro, Serengeti National Park, 
-                            and the Ngorongoro Conservation Area. These natural wonders attract thousands of visitors each year and contribute 
-                            significantly to the country's economy.<br><br>
-                        </p>
-                        <img class="col" src="../images/Tanzania6Pic.jpeg" alt="Serengeti National Park">
-                    </div>
-
-                    
-                    <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
-                        <img class="col" src="../images/TanzaniaPic10.jpeg" alt="Ngorongoro Conservation Area">
-                        <p class="col">
-                            The economy of Tanzania is largely dependent on agriculture, with main crops including coffee,
-                             cotton, cashew nuts, and tobacco. The country also has significant natural resources, such as 
-                             minerals, wildlife, and forests.
-                        </p>
-
-                    </div>    
-                                                   
-
-                
-                    <div class="source">
-                        Source: <a href="https://www.britannica.com/place/Tanzania" target="_blank"> Britannica.com</a>
-                    </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://attenvo.com/blog/wp-content/uploads/2022/09/images-46-edited-1.jpeg"
+                    class="d-block w-100"
+                    alt="Zanzibar"
+                  />
+                  <div
+                    id="tanzania-2-info"
+                    class="carousel-caption d-none d-md-block"
+                  >
+                    <h5>Zanzibar</h5>
+                  </div>
                 </div>
-                <br>
-
-                <!--Things To Do-->
-                <h3>Things to do</h3>
-                <div class="text">
-                    <div class="to-do">
-                        <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
-                            <div class="col to-do-text">
-                                <h5>Serengeti national park</h5>
-                                <p>The Serengeti National Park is one of the largest parks in Tanzania; 
-                                    it has about 14,763 km2 of surface. When you are there, it feels like 
-                                    you were in the lion king film. 
-                                    The name of the park, Serengeti, means “endless plain” and is derived 
-                                    from the Masai language.
-                                    *The Massai are a tribe of about 880,000 people, who live in southern Kenya and northern Tanzania.                                
-                                </p>
-                            </div>
-                            <img class="col" src="../images/TanzaniaPic1.jpeg" alt="Serengeti National Park">
-                            
-                        </div>
-                        <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
-                            <div class="col to-do-text">
-                                <h5>Ngorongoro national park</h5>
-                                <p>The Ngorongoro conservation zone is located in northern Tanzania. 
-                                    This area is situated inside the extensive volcanic crater of Ngorongoro. It serves as a habitat for 
-                                    the five great animals of the big game: elephants, lions, leopards, buffaloes, and rhinos. If you go, 
-                                    stand in from of the park before going down to the crater and you will be able to observe one of the best 
-                                    landscapes of Africa.
-                                </p>
-                            </div>
-                            <img class="col" src="../images/TanzaniaPic2.jpeg" alt="tone Town Market">
-                        </div>
-                        <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
-                            <div class="col to-do-text">
-                                <h5>Trekking in Kilimanjaroa</h5> 
-                                <p>The well-know mountain all over the world. It is the highest peak of Africa 
-                                    with an altitude of 5.895 m. If you are trained, don't miss it!
-                            </div>
-                            <img class="col" src="../images/TanzaniaPic12.jpeg" alt="Kilimanjaroa Trekking">
-                        </div>    
-                        <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
-                            <div class="col to-do-text">
-                                <h5>Relax in Zanzibar and Stone town</h5>
-                                <p>Zanzibar is the heavenly island of Tanzania. Nothing to say that you 
-                                    cannot see in the pictures…go there and relax! Also, you should spend 1 or 2 days in Stone Town and enjoy 
-                                    its ambiance and night markets!
-                                    
-                                </p>
-                            </div>
-                            <img class="col" src="../images/TanzaniaPic3.jpeg"" alt="Stone Town Market">
-                        </div>
-
-                        <div class="row gx-2 row-cols-lg-2 row-cols-sm-1 row-cols-md-1">
-                            <div class="col to-do-text">
-                                <h5>Go on a food tour</h5> 
-                                <p>Tanzania have its typical national dish: Ugali and chapatti.
-                                    Ugali is a mix of cornmeal and water they normally accompany 
-                                    it with some veggies or meat.
-                                    There is another dish typical from Tanzania: Chips Mayai. The appearance is like a Spanish omelet but instead of potato omelet, 
-                                    they do French fries omelet. The appearance might not be amazing but the taste is!
-                                    The best food Tanzania has are its tropical fruits, there are plenty such as mango, papaya, and bananas!
-                                </p>
-                            </div>
-                            <img class="col" src="../images/TanzaniaPic5.jpeg" alt="Chips Mayai">
-                        </div>                    
-                    </div>
-                                               
-                
+                <div class="carousel-item">
+                  <img
+                    src="../images/TanzaniaPic1.jpeg"
+                    class="d-block w-100"
+                    alt="Serengeti National Park"
+                  />
+                  <div
+                    id="tanzania-3-info"
+                    class="carousel-caption d-none d-md-block"
+                  >
+                    <h5>Serengeti National Park</h5>
+                  </div>
                 </div>
-
-                <!--Photo gallery-->
-                
-                <h3>Photo Gallery</h3>
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" style="max-width: 500px">
-                    <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="../images/TanzaniaPic7.jpeg" class="d-block w-100" alt="Rio de Janeiro">
-                            <div id="tanzania-1-info" class="carousel-caption d-none d-md-block">
-                                <h5>Hot-air ballooning in Serengeti National Park</h5>
-                            </div>
-                        </div>
-                              <div class="carousel-item">
-                                <img src="https://attenvo.com/blog/wp-content/uploads/2022/09/images-46-edited-1.jpeg" class="d-block w-100" alt="Zanzibar">
-                                <div id="tanzania-2-info" class="carousel-caption d-none d-md-block">
-                                    <h5>Zanzibar</h5>
-                                  </div>
-                              </div>
-                              <div class="carousel-item">
-                                <img src="../images/TanzaniaPic1.jpeg" class="d-block w-100" alt="Serengeti National Park">
-                                <div id="tanzania-3-info" class="carousel-caption d-none d-md-block">
-                                    <h5>Serengeti National Park</h5>  
-                                  </div>
-                              </div>
-                              <div class="carousel-item">
-                                <img src="https://attenvo.com/blog/wp-content/uploads/2022/09/images-47-edited-2.jpeg" class="d-block w-100" alt="Stone Town">
-                                <div id="tanzania-4-info" class="carousel-caption d-none d-md-block">
-                                    <h5>Stone Town</h5>  
-                                  </div>
-                              </div>
-                              <div class="carousel-item">
-                                <img src="../images/TanzaniaPic3.jpeg" class="d-block w-100" alt="Zanzibar Markets">
-                                <div id="tanzania-5-info" class="carousel-caption d-none d-md-block">
-                                    <h5>Zanzibar Markets</h5>  
-                                  </div>
-                              </div>
-                              <div class="carousel-item">
-                                <img src="../images//TanzaniaPic9.jpeg" class="d-block w-100" alt="Traditional Food">
-                                <div id="tanzania-6-info" class="carousel-caption d-none d-md-block">
-                                    <h5>Traditional Food</h5>  
-                                  </div>
-                              </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                              <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                              <span class="visually-hidden">Next</span>
-                            </button>
-                          </div>
-                          <br>
-
-
-                
-             
-               
-            </main>
-     
-          </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://attenvo.com/blog/wp-content/uploads/2022/09/images-47-edited-2.jpeg"
+                    class="d-block w-100"
+                    alt="Stone Town"
+                  />
+                  <div
+                    id="tanzania-4-info"
+                    class="carousel-caption d-none d-md-block"
+                  >
+                    <h5>Stone Town</h5>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="../images/TanzaniaPic3.jpeg"
+                    class="d-block w-100"
+                    alt="Zanzibar Markets"
+                  />
+                  <div
+                    id="tanzania-5-info"
+                    class="carousel-caption d-none d-md-block"
+                  >
+                    <h5>Zanzibar Markets</h5>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="../images//TanzaniaPic9.jpeg"
+                    class="d-block w-100"
+                    alt="Traditional Food"
+                  />
+                  <div
+                    id="tanzania-6-info"
+                    class="carousel-caption d-none d-md-block"
+                  >
+                    <h5>Traditional Food</h5>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <br />
+          </main>
         </div>
-    
-    <footer>
-        Copyright &#169; 2023 <br>
+      </div>
+
+      <footer>
+        Copyright &#169; 2023 <br />
         Team 4
-    </footer>
-
+      </footer>
+    </div>
     <!--Bootstrap js-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
-
